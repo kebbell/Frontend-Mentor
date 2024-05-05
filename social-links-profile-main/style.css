@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(30, 26%, 79%);
+  margin: 0;
+  padding: 0 20px;
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  background-color: black;
+  color: white;
+  margin: 30%;
+  padding: 15%;
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
