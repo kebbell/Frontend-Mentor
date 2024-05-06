@@ -1,27 +1,21 @@
-const btns = document.querySelectorAll(".accordion-header");
-const contents = document.querySelectorAll(".accordion-body");
+const accordion = document.querySelector(".accordion");
 
-btns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    contents.forEach((acc) => {
-      if (
-        e.target.nextElementSibling !== acc &&
-        acc.classList.contains("active")
-      ) {
-        acc.classList.remove("active");
-        btns.forEach((btn) => btn.classList.remove("active"));
-      }
-    });
-
-    const panel = btn.nextElementSibling;
-    panel.classList.toggle("active");
-    btn.classList.toggle("active");
-  });
+accordion.addEventListener("click", (e) => {
+  const activePanel = e.target.closest(".accordion__panel");
+  if (!activePanel) return;
+  toggleAccordion(activePanel);
 });
 
-window.onclick = (e) => {
-  if(!e.target.matches(".accordion-header")){
-    btns.forEach((btn) => btn.classList.remove("active"));
-    contents.forEach((acc) => acc.classList.remove("active"));
+const toggleAccordion = (panelToActivate) => {
+  const activeButton = panelToActivate.querySelector("button");
+  const activePanel = panelToActivate.querySelector(".accordion__content");
+  const activePanelIsOpened = activeButton.getAttribute("aria-expanded");
+
+  if (activePanelIsOpened === "true") {
+    activeButton.setAttribute("aria-expanded", false);
+    activePanel.setAttribute("aria-hidden", true);
+  } else {
+    activeButton.setAttribute("aria-expanded", true);
+    activePanel.setAttribute("aria-hidden", false);
   }
 };
