@@ -1,52 +1,326 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;600;700&display=swap');
+
+* {
   margin: 0;
   padding: 0;
+  text-decoration: 0;
   box-sizing: border-box;
+  font-size: 1rem;
 }
 
-body{
-  font-family: 'montserrat', sans-serif;
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  line-height: 0;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+/* remove all button styles */
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+/* colors  */
+:root {
+  /* primary */
+  --green: hsla(157, 36%, 37%, 1);
+  --dark-green-hover: hsla(157, 43%, 18%, 1);
+  --cream: hsla(30, 38%, 92%, 1);
+  /* neutral */
+  --white: hsla(0, 0%, 100%, 1);
+  --black: rgb(23, 32, 26);
+  --gray: rgb(91, 97, 121);
+}
+
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  line-height: 1.3;
+  text-rendering: optimizeSpeed;
+  font-family: 'Montserrat', sans-serif;
   background-color: hsl(30, 38%, 92%);
 }
 
-h1 {
-  font-family: 'Fraunces' , serif;
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 24px;
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 37.5rem;
+  background-color: var(--white);
+  border-radius: 0.625rem;
+  box-shadow: 0.1875rem 0.25rem 0.875rem rgba(18, 19, 17, 0.03);
+  transition: ease 0.5s;
+  margin: 1rem 1.5rem;
 }
 
-.desktop {
+
+.container:hover {
+  box-shadow: 0.1875rem 0.25rem 15rem 3px rgb(7 24 12 / 68%);
+  transition: ease 1s;
+}
+
+.product-info-wrapper {
+  padding: 2rem;
+}
+
+/* .grayscale hover effect */
+
+.photo-overflow {
+  overflow: hidden;
+  transition: ease-out 1s;
+  border-radius: 0.625rem 0rem 0rem 0.625rem;
+}
+
+
+.product-photo {
+  overflow: hidden;
+  position: relative;
+  transition: ease-in 1s;
+  /* transform: scale(1.2); */
+}
+
+.product-photo img {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 400px;
-  padding: 32px 16px;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 0.625rem 0rem 0rem 0.625rem;
 }
 
-
-
-
-
-footer {
-  text-align: center;
-  position: absolute; 
-  bottom: 0; 
-  left: 25%;
-  right: 25%;
-  z-index: 10;
-  padding: 3px;
-}
-  
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
-
-@media only screen and (max-width: 375px) {
-}.mobile{
+.product-photo-mobile img,
+.product-photo-mobile {
   display: none;
+}
+
+.product-photo:hover {
+  transform: scale(1);
+  transition: ease-out 1s;
+}
+
+.grayscale {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 100;
+  transition: ease-out 2s;
+  filter: saturate(1.3);
+}
+
+.grayscale:hover {
+  opacity: 0;
+  transition: linear 0.5s;
+}
+
+/* *** */
+
+/* typography */
+
+.overline {
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.3125rem;
+  text-transform: uppercase;
+  color: var(--gray);
+  padding-bottom: 1.25rem;
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: var(--black);
+  padding-bottom: 1.5rem;
+}
+
+p {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.4375rem;
+  color: var(--gray);
+  padding-bottom: 1.75rem;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 1.875rem;
+}
+
+.product-price h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: var(--black);
+  color: var(--green);
+}
+
+.product-price span {
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1;
+  color: var(--gray);
+}
+
+span {
+  text-decoration: line-through;
+}
+
+/* button */
+
+.btn {
+  display: flex;
+  align-items: center;
+  background-color: var(--green);
+  padding: 0.9375rem 3.875rem;
+  border-radius: 0.5313rem;
+  gap: 0.625rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  color: var(--white);
+  transition: ease-in-out 0.3s;
+}
+
+.btn img {
+  height: 100%;
+}
+
+.btn:hover {
+  background-color: var(--dark-green-hover);
+  transition: ease-in-out 0.3s;
+}
+
+@media (max-width: 43.75rem) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+    border-radius: 0.625rem;
+  }
+
+  .photo-overflow {
+    border-radius: 0;
+  }
+
+  .product-info-wrapper {
+    padding: 1.5rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    max-width: 90%;
+  }
+
+  .product-photo-mobile img,
+  .product-photo-mobile {
+    display: flex;
+    object-fit: cover;
+    border-radius: 0.625rem 0.625rem 0rem 0rem;
+  }
+
+  .product-photo-mobile {
+    border-radius: 0.625rem 0.625rem 0rem 0rem;
+  }
+
+  .product-photo,
+  .grayscale {
+    display: none;
+  }
+}
+
+@media (max-width: 17.5rem) {
+  .btn {
+    font-size: 0.625rem;
+    padding: 1rem 2rem;
+  }
+}
+
+main,
+body,
+img {
+  transition: ease-in-out 0.8s;
+  transform: scale(1);
+  -webkit-animation: slideIn 1s ease;
+  animation: slideIn 1.5s ease;
+}
+
+
+.attribution
+{
+  background-color: #ffffff;
+  color: #7d7d7d;
+  font-size: 10px;
+  padding: 10px;
+  text-align: center;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: scale(1);
+    filter: saturate(1.2);
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    filter: saturate(1);
+  }
 }
