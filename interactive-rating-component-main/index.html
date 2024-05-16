@@ -2,48 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="Interactive rating component - Frontend Mentor">
+  <meta name="keywords" content="Interactive rating component, Frontend Mentor">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" 
+  type="image/png" 
+  sizes="32x32" 
+  href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Overpass:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
   
-  <title>Frontend Mentor | Interactive rating component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Interactive rating component</title>
 </head>
 <body>
+    <main>
+      <article class="main-container">
+        <section class="front-section dark-bg">
+          <!-- FRONT -->
+          <img class="star-img" src="./images/icon-star.svg" alt="" aria-hidden=“true”>
+          <h1>How did we do?</h1>
+          <p>Please let us know how we did with your support request. All feedback is appreciated
+            to help us improve our offering!</p>
+          <section class="rating-numbers">
+            <input name="rating" class="radio-btn" value="1" type="radio" id="one" checked></input>
+            <label class="rating-number one default-active" for="one">1</label>
+            <input name="rating" class="radio-btn" value="2" type="radio" id="two"></input>
+            <label class="rating-number two" for="two">2</label>
+            <input name="rating" class="radio-btn" value="3" type="radio" id="three"></input>
+            <label class="rating-number three " for="three">3</label>
+            <input name="rating" class="radio-btn" value="4" type="radio" id="four"></input>
+            <label class="rating-number four" for="four">4</label>
+            <input name="rating" class="radio-btn" value="5" type="radio" id="five"></input>
+            <label class="rating-number five" for="five">5</label>
+          </section>
+          <button class="btn">submit</button>
+        </section>
+        <!-- END OF FRONT -->
+        <!-- BACK -->
+        <section class="back-section dark-bg">
+          <section class="back-section-inner">
+            <img src="./images/illustration-thank-you.svg" alt="" aria-hidden="true">
+            <p class="result-text"></p>
+            <section class="thankyou-section">
+              <h1>Thank you!</h1>
+              <p> We appreciate you taking the time to give a rating. If you ever need more support,
+                don’t hesitate to get in touch!</p>
+            </section>
+          </section>
+        </section>
+        <!-- END OF BACK -->
+      </article>
+    </main>
 
-  <!-- Rating state start -->
-
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
+  <footer>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by Frontend Mentor.
+    Coded by Kebbell.
   </div>
+</footer>
 </body>
 </html>
