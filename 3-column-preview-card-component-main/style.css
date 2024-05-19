@@ -1,12 +1,61 @@
+:root {
+  /*Primary*/
+  --prim-bright-orange: hsl(31, 77%, 52%);
+  --prim-dark-cyan: hsl(184, 100%, 22%);
+  --prim-very-dark-cyan: hsl(179, 100%, 13%);
 
+  /*Neutral*/
+  --neutral-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --neutral-very-light-gray: hsl(0, 0%, 95%);
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  background-color: var(--very-light-gray);
+  min-height: 100vh;
+  padding: 3rem 1rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+button {
+  background-color: var(--prim-bright-orange);
+  color: var(--neutral-transparent-white);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: transparent;
+  color: var(--transparent-white);
+  outline: 1px solid var(--very-light-gray);
+}
 
 footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--neutral-very-light-gray);
   color: rgb(0, 0, 0);
   text-align: center;
 }
