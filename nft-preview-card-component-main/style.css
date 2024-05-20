@@ -38,7 +38,7 @@ body {
 
 h1 {
   color: var(--white);
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   font-weight: 400;
 
 }
@@ -59,6 +59,16 @@ img {
 
 }
 
+.foot {
+color: var(--soft-blue);
+font-weight: 300;
+}
+
+strong {
+  color: var(--white);
+  font-weight: 400;
+  margin-right: 10px;
+}
 
 
 @media (max-width: 480px) {
