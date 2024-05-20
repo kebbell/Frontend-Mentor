@@ -17,6 +17,12 @@
 }
 
 body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,15 +31,25 @@ body {
   font-family: 'Outfit', sans-serif;
 }
 
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
 .container {
   background-color: var(--very-dark-blue-card-bg);
   width: 350px;
-  height: 600px;
+  height: 610px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   padding: 20px;
+}
+
+.container:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(218, 216, 216, 0.2), 0 4px 8px rgba(254, 253, 253, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 h1 {
@@ -56,18 +72,75 @@ h1 {
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 20px;
+}
 
+.container-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.pricing,
+.timing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.pricing {
+  color: var(--cyan);
+  text-align: left;
+}
+
+.timing {
+  gap: 10px;
+  color: var(--soft-blue);
+  text-align: right;
+}
+
+.pricing-img,
+.timing-img {
+  min-width: 20px;
+  min-height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.pricing-img {
+  background-image: url("images/icon-ethereum.svg");
+}
+.timing-img {
+  background-image: url("images/icon-clock.svg");
+}
+
+.container-line {
+  margin-top: 20px;
+  margin-bottom: -20px;
+  opacity: 0.25;
 }
 
 .avatar {
-  display: inline-block;
-  height: 25%;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  height: 30%;
 }
 
+.author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
 .foot {
-color: var(--soft-blue);
-font-weight: 300;
-display: inline-block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  color: var(--soft-blue);
+  font-weight: 300;
 }
 
 strong {
