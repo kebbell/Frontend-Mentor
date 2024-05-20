@@ -49,7 +49,7 @@ h1 {
   font-weight: 300;
 }
 
-img {
+.eth {
   width: 100%;
   height: 300px;
   object-fit: cover;
@@ -59,9 +59,15 @@ img {
 
 }
 
+.avatar {
+  display: inline-block;
+  height: 25%;
+}
+
 .foot {
 color: var(--soft-blue);
 font-weight: 300;
+display: inline-block;
 }
 
 strong {
