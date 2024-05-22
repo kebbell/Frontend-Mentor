@@ -1,4 +1,12 @@
+:root {
+   /* Primary */    
+   --cyan: hsl(179, 62%, 43%);
+   --bright-yellow: hsl(71, 73%, 54%);
 
+    /* Neutral */
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
 
 * {
   margin: 0;
@@ -6,10 +14,20 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Karla', sans-serif;
+}
 
 
 
-
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
