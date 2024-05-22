@@ -6,6 +6,7 @@
     /* Neutral */
     --light-gray: hsl(204, 43%, 93%);
     --grayish-blue: hsl(218, 22%, 67%);
+    --off-cyan: hsla(179, 62%, 43%, 0.699);
 
     --paddingX: 1.8rem;
     --paddingY: 1.5rem;
@@ -41,6 +42,11 @@ h1, h2 {
   line-height: 1.15;
 }
 
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
 h2 {
   font-size: 1.25rem;
   margin-bottom: 1.25rem;
@@ -68,6 +74,29 @@ h2 {
 
 .header h1 {
   
+}
+
+/* Price Section */
+.container .sub {
+  background: var(--cyan);
+  padding: .15rem 1rem 1.5rem 1rem;
+  color: #fff;
+  border-bottom-left-radius: 4px;
+}
+
+/* Why us */
+.container .why-us {
+  background: var(--off-cyan);
+  padding: .15rem 1rem .5rem 1rem;
+  color: #fff;
+  line-height: 0;
+  border-bottom-right-radius: 4px;
+}
+
+.container .why-us p {
+  font-size: .9rem;
+  line-height: .15;
+  color: rgba(255, 255, 255, 0.705);
 }
 
 .price {
