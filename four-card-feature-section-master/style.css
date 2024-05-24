@@ -63,12 +63,15 @@ h1 {
 header span {
   font-weight: 200;
 }
-
-.p {
-  margin: 1rem 0;
-  font-weight: 300;
+header p {
+  margin: 0 auto;
   text-align: center;
+  margin-top: 1.3rem;
+  width: 40%;
   color: var(--grayish-blue);
+  line-height: 1.5rem;
+  word-spacing: -1px;
+  font-weight: 400;
 }
 
 /** Feature Cards **/
@@ -82,20 +85,88 @@ header span {
   margin-top: 3.8rem;
 }
 
-.grid-item1 {
-  grid-area: 1 / 1 / 2 / 2;
-} 
-.grid-item2 {
-  grid-area: 1 / 2 / 2 / 3;
-}
-.grid-item3 {
-  grid-area: 2 / 1 / 3 / 2;
-}
-.grid-item4 {
-  grid-area: 2 / 2 / 3 / 3;
+.card-one,
+.card-two,
+.card-three,
+.card-four {
+  position: relative;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
 }
 
+.grid-info {
+  padding: 1.7rem 2.3rem;
+}
 
+.grid-info h2 {
+  font-size: 1.2rem;
+  color: var(--dark-blue);
+}
+
+.card-info p {
+  color: var(--grayish-blue);
+  font-size: 13px;
+  line-height: 1.5rem;
+  padding-top: 9px;
+}
+
+/** Icon images **/
+
+.icon {
+  position: static;
+  height: 4rem;
+  margin-left: 73%;
+  margin-top: 3%;
+  width: 4rem;
+}
+.card-one,
+.card-two,
+.card-three,
+.card-four {
+  border-top-style: solid;
+  border-top-width: 5px;
+  max-width: 350px;
+  width: 100%;
+  min-height: 15rem;
+  height: 30%;
+}
+.card-one {
+  border-color: var(--cyan);
+}
+.card-two {
+  border-color: var(--red);
+}
+.card-three {
+  border-color: var(--orange);
+}
+.card-four {
+  border-color: var(--blue);
+}
+
+.card-one,
+.card-four,
+.grid-center-container {
+  place-self: center;
+}
+
+.grid-center-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+/** Media Queries **/
+
+@media only screen and (max-width: 1025px) {
+  .feature-cards,
+  .grid-center-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+}
 
 footer {
   position: fixed;
