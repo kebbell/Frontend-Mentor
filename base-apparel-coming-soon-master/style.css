@@ -22,6 +22,21 @@
   box-sizing: border-box;
 }
 
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--gradient-1);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 footer {
   position: fixed;
   left: 0;
