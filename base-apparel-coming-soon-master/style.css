@@ -33,7 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: var(--gradient-1);
+  background: var(--gradient-1), var(--gradient-2);
   font-family: 'Josefin Sans', sans-serif;
 }
 
