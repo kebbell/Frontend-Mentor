@@ -7,31 +7,48 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
   
   <title>Intro component with sign up form</title>
 
 </head>
 <body>
 <article>
-  <div class="container">
+  <section class="section-one">
     <h1>Learn to code by watching others</h1>
 
     <p class="description">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+  </section>
 
+  <section class="section-two">
+    <div class="banner">
     <h2><strong>Try it free 7 days</strong> then $20/mo. thereafter</h2>
   </div>
+    <form action="">
+    <div class="input-container">
+      <input type="text" placeholder="First Name" name="first name" required>
+      <input type="text" placeholder="Last Name" name="last name" required>
+      <input type="text" placeholder="Email address" name="mail" required>
+      <div>
+        <input type="password" placeholder="Password" id="MyInput"/>
+        <input type="checkbox" onclick="myFunction()">Show Password
+        <img
+          src="images/icon-error.svg"
+          alt="error icon"
+          class="error__icon password"
+        />
+        <p class="error password"></p>
+      </div>
 
-  <div class="input-container">
-    <input type="text" placeholder="First Name" name="first name" required>
-    <input type="text" placeholder="Last Name" name="last name" required>
-    <input type="text" placeholder="Email address" name="mail" required>
-    <input type="password" value="Password" id="myInput">
-    <input type="checkbox" onclick="myFunction()">Show Password
 
-    <button>Claim your free trial</button>
+      <button>Claim your free trial</button>
 
-    <p class="small-text">By clicking the button, you are agreeing to our Terms and Services</p>
-  </div>
+      <p class="small-text">
+        By clicking the button, you are agreeing to our <a href="#">Terms and Services</a>
+      </p>
+    </form>
+  </section>
 
 </article>
 <script src="script.js"></script>
