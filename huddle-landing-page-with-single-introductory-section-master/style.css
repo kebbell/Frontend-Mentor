@@ -35,7 +35,6 @@ article {
 }
 
 .mockup {
-  height: ;
   width: 100%;
   padding-left: 50px;
   padding-right: 50px;
@@ -85,8 +84,13 @@ button {
   -webkit-transition: all ease-in-out 0.3s;
 }
 
-/* Social Media */
-.social-media {
+button:hover {
+  background-color: var(--color-soft-magenta);
+  color: white;
+  cursor: pointer;
+}
+
+/* Social Media */.social-media {
   position: relative;
   display: flex;
   width: 100%;
@@ -99,26 +103,18 @@ button {
   gap: 2.5rem;
 }
 
-.sm1, .sm2, .sm3 {
-  display: inline-block;
-  border: 1px solid white;
+.media-icon {
+  align-items: center;
+  width: .5rem;
+  height: 2rem;
+}
+
+.fab {
+  color: white;
   padding: 10px;
-  border-radius: 50%;
+  width: 2.5rem;
+  text-align: center;
 }
-
-.sm1:hover {
-  background-color: white;
-  opacity: .25;
-}
-.sm2:hover {
-  background-color: white;
-  opacity: .25;
-}
-.sm3:hover {
-  background-color: white;
-  opacity: .25;
-}
-
 
 
 /* .social-media {
