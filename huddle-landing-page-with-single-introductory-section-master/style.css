@@ -212,6 +212,9 @@ header {
   .info-container p {
     margin: auto;
   }
+  .registration-button {
+    margin: 0 auto;
+  }
 
   .social-media {
     justify-content: center;
