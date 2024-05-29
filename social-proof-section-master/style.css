@@ -42,7 +42,20 @@ body {
 
 
 
+/* RATINGS */
 
+.star {
+  background-repeat: repeat-x;
+}
+
+
+
+
+
+
+
+
+/* REVIEW */
 .revs {
   grid-column: span 2;
 }
