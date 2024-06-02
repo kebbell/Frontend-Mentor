@@ -74,6 +74,20 @@ span {
 
 /* EMAIL */
 
+@media screen and (max-width: 700px) {
+  .email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  .noti {
+    width: 100%;
+  }
+  
+}
+
 .email {
   display: flex;
   align-items: center;
