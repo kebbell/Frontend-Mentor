@@ -40,7 +40,8 @@ body {
   grid-template-columns: 1fr;
   align-items: center;
   justify-content: center;
-
+  width: 40vw;
+  margin: 0 auto;
 }
 
 /* Heading */
@@ -63,21 +64,26 @@ h1 {
 .names {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  flex-wrap: nowrap;
 }
 
 .names label {
-  display: grid;
+
 }
 
 .names input {
-  display: grid;
   width: 100%;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: 1px solid #ccc;
 }
 
-.fname {
+#fname {
+  width: 90%;
+  margin-right: 5%;
+}
+
+#lname {
+  width: 90%;
   margin-right: 5%;
 }
 
