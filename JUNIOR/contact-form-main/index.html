@@ -14,49 +14,65 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="script.js">
   
-  <title>Contact form</title>
+  <title>Contact Form</title>
 
 </head>
 <body>
   <main>
-    <article>
+    <form class="form" id="form">
+      <div class="container">
+        <h1>Contact Us</h1>
 
-      <h1>Contact Us</h1>
+        <div class="contact-info">
+            <div class="names">
+              <label>First Name</label><br>
+              <input class="fname" type="text" id="fname" required oninvalid="this.setCustomValidity('This field is required')" autocomplete="false">
 
-      <p>First Name</p>
-      This field is required
+              <label>Last Name</label><br>
+              <input class="lname" type="text" id="lname" required oninvalid="this.setCustomValidity('This field is required')">
+            </div>
 
-      <p>Last Name</p>
-      
-      This field is required
+            <div class="email">
+              <label>Email Address</label><br>
+              <input class="email" type="email" id="email" required oninvalid="this.setCustomValidity('This field is required')" autocomplete="false">
+            </div>
 
-      <p>Email Address</p>
-      Please enter a valid email address
-      This field is required
-      
-      <p>Query Type</p>
-      General Enquiry
-      Support Request
-      Please select a query type
+            <div class="query">
+              <label>Query Type</label><br>
+              <input type="checkbox" class="query-type" id="query" required oninvalid="this.setCustomValidity('Please select a query type')" autocomplete="false">
+              <label for="general">General Enquiry</label>
+              <label for="support">Support Request</label>
+            </div>
+            
+            <div class="message">
+              <label>Message</label><br>
+              <input class="message" type="Message" id="message" required oninvalid="this.setCustomValidity('This field is required')" autocomplete="false">
+            </div>
 
-      <p>Message</p>
-      This field is required
+            <div>
+              <input type="checkbox" id="check" name="check" value="Consent" id="consent" required oninvalid="this.setCustomValidity('To submit this form, please consent to being contacted')" autocomplete="false">
+              <label for="consent"> I consent to being contacted by the team</label>
+            </div>
 
-      I consent to being contacted by the team
-      To submit this form, please consent to being contacted
+            <div>
+              <button>Submit</button>
+            </div>
+        </div>
 
-      Submit
+        <div>
+          <p class="hide">
+            Message Sent!
+            Thanks for completing the form. We'll be in touch soon!
+          </p>
+        </div>
+      </div>
 
-      Message Sent!
-      Thanks for completing the form. We'll be in touch soon!
-
-    </article>
+    </form>
   </main>
-  
-  <div class="attribution">
-    Challenge by Frontend Mentor. 
-    Coded by Kebbell.
-  </div>
+    <footer>
+        Challenge by Frontend Mentor. 
+        Coded by Kebbell.
+    </footer>
   <script src="script.js"></script>
 </body>
 </html>

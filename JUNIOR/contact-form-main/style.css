@@ -16,10 +16,55 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: var(--green-200);
+  font-family: 'Karla', sans-serif;
+}
+
+.form {
+  display: grid;
+  
+  place-items: center;
+  background-color: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(50%, 50%);
+  width: 50%;
+  height: 70%;
+}
+
+.container {
+  display: grid;
+  
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+.contact-info {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1rem;
+}
 
 
 
 
 
-  .attribution { font-size: 11px; text-align: center; }
-  .attribution a { color: hsl(228, 45%, 44%); }
+.names {
+  display: flex;
+}
+
+
+
+.hide {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
