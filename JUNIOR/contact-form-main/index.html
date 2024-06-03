@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="script.js">
   
   <title>Contact Form</title>
-
 </head>
 <body>
   <main>
@@ -25,16 +24,20 @@
 
         <div class="contact-info">
             <div class="names">
-              <label>First Name</label><br>
-              <input class="fname" type="text" id="fname" autocomplete="off" required oninvalid="this.setCustomValidity('This field is required')">
+              <div class="fname">
+                <label>First Name</label><br>
+                <input class="fname" type="text" id="fname" required oninvalid="this.setCustomValidity('This field is required')">
+              </div>
 
-              <label>Last Name</label><br>
-              <input class="lname" type="text" id="lname" required oninvalid="this.setCustomValidity('This field is required')">
+              <div class="lname">
+                <label>Last Name</label><br>
+                <input class="lname" type="text" id="lname" required oninvalid="this.setCustomValidity('This field is required')">
+              </div>
             </div>
 
             <div class="email">
               <label>Email Address</label><br>
-              <input class="email" type="email" id="email" required oninvalid="this.setCustomValidity('This field is required')" autocomplete="false">
+              <input class="email" type="email" id="email" required oninvalid="this.setCustomValidity('This field is required')">
             </div>
 
             <div class="query">
@@ -51,11 +54,11 @@
             
             <div class="message">
               <label>Message</label><br>
-              <input class="message" type="Message" id="message" required oninvalid="this.setCustomValidity('This field is required')" autocomplete="false">
+              <input class="message" type="Message" id="message" required oninvalid="this.setCustomValidity('This field is required')">
             </div>
 
             <div>
-              <input type="checkbox" id="check" name="check" value="Consent" id="consent" required oninvalid="this.setCustomValidity('To submit this form, please consent to being contacted')" autocomplete="false">
+              <input type="checkbox" id="check" name="check" value="Consent" id="consent" required oninvalid="this.setCustomValidity('To submit this form, please consent to being contacted')">
               <label for="consent"> I consent to being contacted by the team</label>
             </div>
 

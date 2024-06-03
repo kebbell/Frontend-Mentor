@@ -8,6 +8,9 @@
   --white: hsl(0, 0%, 100%);
   --gray-500: hsl(186, 15%, 59%);
   --gray-900: hsl(187, 24%, 22%);
+
+  /* Labels */
+  --font-size-labels: 16px;
 }
 
 *, *::after *::before {
@@ -16,6 +19,7 @@
   box-sizing: border-box;
 }
 
+/*  */
 body {
   background-color: var(--green-200);
   font-family: 'Karla', sans-serif;
@@ -39,32 +43,56 @@ body {
 
 }
 
+/* Heading */
+
+h1 {
+  color: var(--gray-900);
+}
+
+
+/* Contact Info */
 .contact-info {
   width: 100%;
   align-items: center;
   padding-bottom: 1rem;
+  color: var(--gray-500);
+  font-weight: var(--font-size-labels);
 }
 
+/* Names */
+.names {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-wrap: nowrap;
+}
 
+.names label {
+  display: grid;
+}
+
+.names input {
+  display: grid;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.fname {
+  margin-right: 5%;
+}
+
+/*  */
 .radio {
   display: flex;;
 }
 
 
-.names {
-  white-space: nowrap;
-  width: 60%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  
-}
-
-
-
+/*  */
 .hide {
   display: none;
 }
 
+/*  */
 footer {
   position: fixed;
   left: 0;
