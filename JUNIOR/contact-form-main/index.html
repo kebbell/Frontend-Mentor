@@ -26,7 +26,7 @@
         <div class="contact-info">
             <div class="names">
               <label>First Name</label><br>
-              <input class="fname" type="text" id="fname" required oninvalid="this.setCustomValidity('This field is required')" autocomplete="false">
+              <input class="fname" type="text" id="fname" autocomplete="off" required oninvalid="this.setCustomValidity('This field is required')">
 
               <label>Last Name</label><br>
               <input class="lname" type="text" id="lname" required oninvalid="this.setCustomValidity('This field is required')">
@@ -39,9 +39,14 @@
 
             <div class="query">
               <label>Query Type</label><br>
-              <input type="checkbox" class="query-type" id="query" required oninvalid="this.setCustomValidity('Please select a query type')" autocomplete="false">
-              <label for="general">General Enquiry</label>
-              <label for="support">Support Request</label>
+
+              <div class="radio">
+                <input type="radio" class="query-type" id="general" name="Gen" value="General_Enquiry" required oninvalid="this.setCustomValidity('Please select a query type')">
+                <label for="general">General Enquiry</label><br>
+
+                <input type="radio" class="query-type" id="support" name="Supp" value="Support_Request" required oninvalid="this.setCustomValidity('Please select a query type')">
+                <label for="support">Support Request</label><br>
+              </div>
             </div>
             
             <div class="message">

@@ -23,36 +23,40 @@ body {
 
 .form {
   display: grid;
-  
+  justify-content: center;
   place-items: center;
   background-color: #fff;
-  left: 50%;
-  top: 50%;
   transform: translate(50%, 50%);
   width: 50%;
-  height: 70%;
 }
 
 .container {
   display: grid;
-  
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
   justify-content: center;
-  width: 80%;
+
 }
 
 .contact-info {
   width: 100%;
-  text-align: center;
+  align-items: center;
   padding-bottom: 1rem;
 }
 
 
-
+.radio {
+  display: flex;;
+}
 
 
 .names {
-  display: flex;
+  white-space: nowrap;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
 }
 
 
