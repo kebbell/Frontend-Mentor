@@ -25,16 +25,17 @@ body {
   font-family: 'Karla', sans-serif;
 }
 
-
-
 .form {
   padding: 20px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
   width: 50%;
+  height: 80%;
   display: grid;
   justify-content: center;
   place-items: center;
   background-color: #fff;
-  transform: translate(50%, 50%);
   padding-top: -50px;
 }
 
@@ -48,8 +49,17 @@ body {
   margin: 0 auto;
 }
 
+/* Labels */
 label {
   font-size: var(--font-size-labels);
+}
+
+#marg{
+  margin-top: 10px;
+}
+
+.check, .but {
+  margin-top: 10px;
 }
 
 /* Heading */
@@ -65,7 +75,7 @@ h1 {
   width: 100%;
   align-items: center;
   padding-bottom: 1rem;
-  color: var(--gray-500);
+  color: var(--gray-900);
   font-weight: var(--font-size-labels);
 }
 
@@ -81,27 +91,37 @@ h1 {
 
 .names input {
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 1px solid #ccc;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: .5px solid var(--gray-900);
   border-radius: 5px;
   margin-bottom: 20px;
 }
 
-#fname, #lname {
+.fname, .lname {
   width: 90%;
   margin-right: 5%;
 }
 
 /* Email & Message */
 
-.email input, .message input {
+.email input {
   width: 95%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 1px solid #ccc;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: .5px solid var(--gray-900);
   border-radius: 5px;
   margin-bottom: 20px;
+}
+
+.message input {
+  width: 95%;
+  padding-top: 10px;
+  padding-bottom: 70px;
+  border: .5px solid var(--gray-900);
+  border-radius: 5px;
+  margin-bottom: 20px;
+
 }
 
 /*  */
@@ -109,6 +129,17 @@ h1 {
   display: flex;
   margin-bottom: 20px;
 
+}
+
+.box {
+  width: 90%;
+  margin-right: 5%;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  outline: .5px solid var(--gray-900);
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .sup, .gen {
@@ -125,6 +156,7 @@ h1 {
 /* Checkbox */
 .check, .q {
   margin-bottom: 20px;
+  margin-right: 20px;
 }
 
 button {
@@ -134,10 +166,10 @@ button {
   border-radius: 5px;
   background-color: var(--green-600);
   border: none;
-  color: #fff;
+  color: var(--white);
 }
 
-/*  */
+/* ADD AS JS ALERT  */
 .hide {
   display: none;
 }

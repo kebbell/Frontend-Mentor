@@ -26,37 +26,41 @@
             <div class="names">
               <div class="fname">
                 <label>First Name</label><br>
-                <input class="fname" type="text" id="fname" autocomplete="false" required oninvalid="this.setCustomValidity('This field is required')">
+                <input class="fname" type="text" id="marg" autocomplete="false" required oninvalid="this.setCustomValidity('This field is required')">
               </div>
 
               <div class="lname">
                 <label>Last Name</label><br>
-                <input class="lname" type="text" id="lname" required oninvalid="this.setCustomValidity('This field is required')">
+                <input class="lname" type="text" id="marg" required oninvalid="this.setCustomValidity('This field is required')">
               </div>
             </div>
 
             <div class="email">
               <label>Email Address</label><br>
-              <input class="email" type="email" id="email" required oninvalid="this.setCustomValidity('This field is required')">
+              <input class="email" type="email" id="marg" required oninvalid="this.setCustomValidity('This field is required')">
             </div>
 
             <div class="query">
               <div class="q">
-                <label>Query Type</label><br>
+                <label class="marg">Query Type</label><br>
               </div>
 
               <div class="radio">
-                <input type="radio" class="gen" id="general" name="Gen" value="General_Enquiry" required oninvalid="this.setCustomValidity('Please select a query type')">
-                <label for="general">General Enquiry</label><br>
+                <div class="box">
+                  <input type="radio" class="gen" id="general" name="Gen" value="General_Enquiry" required oninvalid="this.setCustomValidity('Please select a query type')">
+                  <label for="general">General Enquiry</label><br>
+                </div>
 
-                <input type="radio" class="sup" id="support" name="Supp" value="Support_Request" required oninvalid="this.setCustomValidity('Please select a query type')">
-                <label for="support">Support Request</label><br>
+                <div class="box">
+                  <input type="radio" class="sup" id="support" name="Supp" value="Support_Request" required oninvalid="this.setCustomValidity('Please select a query type')">
+                  <label for="support">Support Request</label><br>
+                </div>
               </div>
             </div>
             
             <div class="message">
               <label>Message</label><br>
-              <input class="message" type="Message" id="message" required oninvalid="this.setCustomValidity('This field is required')">
+              <input class="message" type="Message" id="marg" required oninvalid="this.setCustomValidity('This field is required')">
             </div>
 
             <div class="check">
@@ -64,10 +68,9 @@
               <label for="consent"> I consent to being contacted by the team</label>
             </div>
             <div>
-              <button>Submit</button>
+              <button class="but">Submit</button>
             </div>
         </div>
-
         <div>
           <p class="hide">
             Message Sent!
@@ -84,4 +87,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
