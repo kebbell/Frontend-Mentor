@@ -13,7 +13,7 @@
   --font-size-labels: 16px;
 }
 
-*, *::after *::before {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,13 +25,17 @@ body {
   font-family: 'Karla', sans-serif;
 }
 
+
+
 .form {
+  padding: 20px;
+  width: 50%;
   display: grid;
   justify-content: center;
   place-items: center;
   background-color: #fff;
   transform: translate(50%, 50%);
-  width: 50%;
+  padding-top: -50px;
 }
 
 .container {
@@ -44,10 +48,15 @@ body {
   margin: 0 auto;
 }
 
+label {
+  font-size: var(--font-size-labels);
+}
+
 /* Heading */
 
 h1 {
   color: var(--gray-900);
+  margin: 20px 0 30px;
 }
 
 
@@ -75,23 +84,58 @@ h1 {
   padding-top: 10px;
   padding-bottom: 10px;
   border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
-#fname {
+#fname, #lname {
   width: 90%;
   margin-right: 5%;
 }
 
-#lname {
-  width: 90%;
-  margin-right: 5%;
+/* Email & Message */
+
+.email input, .message input {
+  width: 95%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 /*  */
 .radio {
-  display: flex;;
+  display: flex;
+  margin-bottom: 20px;
+
 }
 
+.sup, .gen {
+  margin-right: 1%;
+}
+
+/* .radio input {
+  width: 95%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #ccc;
+} */
+
+/* Checkbox */
+.check, .q {
+  margin-bottom: 20px;
+}
+
+button {
+  width: 95%;
+  margin-bottom: 20px;
+  padding: 14px 0;
+  border-radius: 5px;
+  background-color: var(--green-600);
+  border: none;
+  color: #fff;
+}
 
 /*  */
 .hide {
@@ -105,4 +149,6 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
+  color: var(--gray-500);
+  font-size: 12px;
 }
