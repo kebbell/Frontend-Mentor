@@ -30,7 +30,7 @@ body {
   margin: auto;
   margin-top: 100px;
   margin-bottom: 100px;
-  width: 50%;
+  width: 60%;
   height: 80%;
   display: grid;
   justify-content: center;
@@ -47,6 +47,27 @@ body {
   justify-content: center;
   width: 40vw;
   margin: 0 auto;
+}
+
+/* Media Screen */
+
+@media screen and (max-width: 375px) {
+  .form {
+    width: 80%;
+  }
+  .container {
+    width: 40vw;
+  }
+  .names {
+    display: grid;
+    width: 90%;
+    margin-right: 5%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  .h1 {
+    font-size: 20px;
+  }
 }
 
 /* Labels */
