@@ -56,17 +56,21 @@ body {
     width: 80%;
   }
   .container {
-    width: 40vw;
+    width: 60vw;
   }
-  .names {
-    display: grid;
-    width: 90%;
-    margin-right: 5%;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-  }
+
   .h1 {
-    font-size: 20px;
+    font-size: 18px !important;
+  }
+  .radio, .names {
+    display: grid !important;
+    grid-template-rows: 1fr;
+  }
+  .contact-info{
+    font-size: 8px;
+  }
+  label {
+    font-size: 2px;
   }
 }
 
@@ -97,13 +101,14 @@ h1 {
   align-items: center;
   padding-bottom: 1rem;
   color: var(--gray-900);
-  font-weight: var(--font-size-labels);
+  font-size: var(--font-size-labels);
 }
 
 /* Names */
+
 .names {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+
 }
 
 .names input {
@@ -183,6 +188,7 @@ button {
   background-color: var(--green-600);
   border: none;
   color: var(--white);
+  font-size: var(--font-size-labels);
 }
 
 /* ADD AS JS ALERT  */
