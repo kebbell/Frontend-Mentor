@@ -175,7 +175,18 @@ input:focus {
   outline: .5px solid var(--gray-900);
   border-radius: 5px;
   margin-bottom: 20px;
+  transition: background-color 0.3s ease;
 }
+
+.box:hover {
+  cursor: pointer;
+  background-color: var(--gray-200);
+}
+
+.box input[type="radio"]:checked {
+  background-color: var(--green-200);
+}
+
 
 .sup, .gen {
   margin-right: 1%;
