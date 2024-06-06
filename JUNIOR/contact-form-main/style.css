@@ -49,6 +49,10 @@ body {
   margin: 0 auto;
 }
 
+span {
+  color: var(--green-600);
+}
+
 /* Media Screen */
 
 @media screen and (max-width: 375px) {
@@ -157,7 +161,7 @@ input:focus {
 
 /* Radio */
 .radio {
-  display: flex;
+  display: flex !important;
   margin-bottom: 20px;
 }
 
@@ -167,7 +171,7 @@ input:focus {
 }
 
 .box {
-  width: 90%;
+  width: 95%;
   margin-right: 5%;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -232,6 +236,44 @@ button:hover {
 /* ADD AS JS MODAL  */
 .hide {
   display: none;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  color: var(--white);
+  background-color: var(--gray-900);
+  opacity: .95;
+  margin: 1% auto; /* 15% from the top and centered */
+  padding: 25px;
+  border: 1px solid #888;
+  width: 28%; /* Could be more or less, depending on screen size */
+  height: 12%;
+  border-radius: 8px;
+}
+
+.modal-header {
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.img {
+  margin-right: 10px;
+}
+
+.modal-body {
+  font-weight: lighter;
 }
 
 /*  */
