@@ -1,7 +1,27 @@
 (function() {
   var input = document.createElement('INPUT');
   input.type = 'text';
+  input.required = true;
+  input.addEventListener("input", function() {
+    if (input.value !== "") {
+      input.classList.remove("required");
+    } else {
+      input.classList.add("required");
+    }
+  });
   document.getElementById('form').appendChild(input);
+
+  var radio = document.createElement('INPUT');
+  radio.type = 'radio';
+  radio.required = true;
+  radio.addEventListener("input", function() {
+    if (radio.checked) {
+      radio.classList.remove("required");
+    } else {
+      radio.classList.add("required");
+    }
+  });
+  document.getElementById('form').appendChild(radio);
 })();
 
 
@@ -13,22 +33,41 @@ var modal = document.getElementById("myModal");
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+// Get the input fields
+var name = document.forms["form"]["name"];
+var email = document.forms["form"]["email"];
+var message = document.forms["form"]["message"];
+var radio = document.forms["form"]["rating"];
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
+// Function to check if all inputs are filled in
+function validateForm() {
+  const isInputFilled = input => input.value !== "";
+  const isRadioChecked = radio => radio.checked;
+
+  return [name, email, message].every(isInputFilled) && isRadioChecked(radio);
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+// Add event listener to the button
+btn.addEventListener("click", function() {
+  if (validateForm()) {
+    modal.style.display = "block";
+  } 
+});
+
+// Function to close the modal
+function closeModal() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+// Add event listener to the window
+window.addEventListener("click", function(event) {
   if (event.target == modal) {
-    modal.style.display = "none";
+    closeModal();
   }
-}
+});
+
+// Add event listener to the close button
+var closeButton = document.getElementsByClassName("close")[0];
+closeButton.addEventListener("click", closeModal);
+
+
