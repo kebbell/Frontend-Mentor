@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" 
+  type="image/png" 
+  sizes="32x32" 
+  href="./assets/images/favicon-32x32.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Karla:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="script.js">
+  
+  <title>Contact Form</title>
+</head>
+<body>
+  <main>
+    <form class="form" id="form">
+      <div class="container">
+        <h1>Contact Us</h1>
+
+        <div class="contact-info">
+            <div class="names">
+              <div class="fname">
+                <label>First Name <span>*</span></label><br>
+                <input class="fname" type="text" id="marg" autocomplete="false" required oninvalid="this.setCustomValidity('This field is required')">
+              </div>
+
+              <div class="lname">
+                <label>Last Name <span>*</span></label><br>
+                <input class="lname" type="text" id="marg" required oninvalid="this.setCustomValidity('This field is required')">
+              </div>
+            </div>
+
+            <div class="email">
+              <label>Email Address <span>*</span></label><br>
+              <input class="email" type="email" id="marg" required oninvalid="this.setCustomValidity('This field is required')">
+            </div>
+
+            <div class="query">
+              <div class="q">
+                <label class="marg">Query Type <span>*</span></label><br>
+              </div>
+
+              <div class="radio">
+                <div class="box">
+                  <input type="radio" class="gen" id="general" name="Gen" value="General_Enquiry"  required oninvalid="this.setCustomValidity('Please select a query type')">
+                  <label for="general">General Enquiry</label><br>
+                </div>
+
+                <div class="box">
+                  <input type="radio" class="sup" id="support" name="Supp" value="Support_Request" required oninvalid="this.setCustomValidity('Please select a query type')">
+                  <label for="support">Support Request </label><br>
+                </div>
+              </div>
+            </div>
+            
+            <div class="message">
+              <label>Message <span>*</span></label><br>
+              <input class="message" type="Message" id="marg" aria-describedby="required-description" required oninvalid="this.setCustomValidity('This field is required')">
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="check" name="check" value="Consent" id="consent" aria-describedby="required-description" required oninvalid="this.setCustomValidity('To submit this form, please consent to being contacted')">
+              <label for="consent"> I consent to being contacted by the team <span>*</span></label>
+            </div>
+            <!-- Trigger/Open The Modal -->
+            <button id="myBtn" class="but">Submit</button>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <img class="img" src="./assets/images/icon-success-check.svg" alt="">
+                <h2>   Message Sent!</h2>
+              </div>
+              <div class="modal-body">
+                <p>Thanks for completing the form. We'll be in touch soon!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
+    <footer>
+        Challenge by Frontend Mentor. 
+        Coded by Kebbell.
+    </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,288 @@
+:root {
+  /* Primary */
+  --green-200: hsl(148, 38%, 91%);
+  --green-600: hsl(169, 82%, 27%);
+  --red: hsl(0, 66%, 54%);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(186, 15%, 59%);
+  --gray-900: hsl(187, 24%, 22%);
+
+  /* Labels */
+  --font-size-labels: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*  */
+body {
+  background-color: var(--green-200);
+  font-family: 'Karla', sans-serif;
+}
+
+.form {
+  padding: 20px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 60%;
+  height: 80%;
+  display: grid;
+  justify-content: center;
+  place-items: center;
+  background-color: #fff;
+  padding-top: -50px;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+  margin: 0 auto;
+}
+
+span {
+  color: var(--green-600);
+}
+
+/* Media Screen */
+
+@media screen and (max-width: 375px) {
+  .form {
+    width: 80%;
+  }
+  .container {
+    width: 60vw;
+  }
+
+  .h1 {
+    font-size: 18px !important;
+  }
+  .radio, .names {
+    display: grid !important;
+    grid-template-rows: 1fr;
+  }
+  .contact-info{
+    font-size: 8px;
+  }
+  label {
+    font-size: 2px;
+  }
+}
+
+/* Labels */
+label {
+  font-size: var(--font-size-labels);
+}
+
+#marg{
+  margin-top: 10px;
+}
+
+.check, .but {
+  margin-top: 10px;
+}
+
+/* Heading */
+
+h1 {
+  color: var(--gray-900);
+  margin: 20px 0 30px;
+}
+
+
+/* Contact Info */
+.contact-info {
+  width: 100%;
+  align-items: center;
+  padding-bottom: 1rem;
+  color: var(--gray-900);
+  font-size: var(--font-size-labels);
+}
+
+/* Names */
+
+.names {
+  display: flex;
+
+}
+
+.names input {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: .5px solid var(--gray-900);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.fname, .lname {
+  width: 90%;
+  margin-right: 5%;
+}
+
+/* Email & Message */
+
+.email input {
+  width: 95%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: .5px solid var(--gray-900);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.message input {
+  width: 95%;
+  padding-top: 10px;
+  padding-bottom: 70px;
+  border: .5px solid var(--gray-900);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+input:focus {
+  color: #000;
+  outline: 1px solid var(--green-600);
+}
+
+.message
+
+/* Radio */
+.radio {
+  display: flex !important;
+  margin-bottom: 20px;
+}
+
+.box:hover {
+  cursor: pointer;
+  outline-color: var(--green-600);
+}
+
+.box {
+  width: 95%;
+  margin-right: 5%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  outline: .5px solid var(--gray-900);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.box:hover {
+  cursor: pointer;
+  background-color: var(--gray-200);
+}
+
+.box input[type="radio"]:checked {
+  background-color: var(--green-200);
+}
+
+
+.sup, .gen {
+  margin-right: 1%;
+}
+
+.radio input {
+  accent-color: var(--green-600);
+}
+
+/* .radio input {
+  width: 95%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #ccc;
+} */
+
+/* Checkbox */
+.check, .q {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.check input {
+  accent-color: var(--green-600);
+}
+
+button {
+  width: 95%;
+  margin-bottom: 20px;
+  padding: 14px 0;
+  border-radius: 5px;
+  background-color: var(--green-600);
+  border: none;
+  color: var(--white);
+  font-size: var(--font-size-labels);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(26, 66, 26);
+}
+
+/* ADD AS JS MODAL  */
+.hide {
+  display: none;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  color: var(--white);
+  background-color: var(--gray-900);
+  opacity: .95;
+  margin: 1% auto; /* 15% from the top and centered */
+  padding: 25px;
+  border: 1px solid #888;
+  width: 28%; /* Could be more or less, depending on screen size */
+  height: 12%;
+  border-radius: 8px;
+}
+
+.modal-header {
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.img {
+  margin-right: 10px;
+}
+
+.modal-body {
+  font-weight: lighter;
+}
+
+/*  */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: var(--gray-500);
+  font-size: 12px;
+}
