@@ -31,11 +31,24 @@ body {
 .container {
   position: absolute;
   background-color: #fff;
-  padding: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 25px;
+}
+.layout {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+.form-container {
+  display: flex;
 }
 
 p, h1,li {
