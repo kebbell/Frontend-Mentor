@@ -92,6 +92,14 @@ button {
   border-radius: 5px;
 }
 
+
+.desktop {
+  width: 80%;
+  margin-left: 20px;
+}
+
+/* SUCCESS MESSAGE */
+
 .success-container {
   display: none;
   position: absolute;
