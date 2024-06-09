@@ -29,17 +29,15 @@ body {
 }
 
 .container {
-  position: absolute;
+  display: grid;
+  place-items: center;
   background-color: #fff;
-  padding-left: 60px;
-  padding-right: 60px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 25px;
+  padding-left: 7%;
+  max-height: 80vh;
+  min-height: 40vh;
+  border-radius: 10px;
 }
+
 .layout {
   display: grid;
   place-content: center;
@@ -62,24 +60,30 @@ ul {
 
 /* EMAIL */
 
+.names {
+  font-size: 12px;
+  padding: 10px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
 .email {
   display: flex;
   flex-direction: column;
 }
 
-.email p {
-  margin-bottom: 10px;
-}
-
 .email label {
   font-weight: bold;
+  padding: 10px;
+  font-size: 2px;
 }
 
 .email input[type="email"] {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
   border-radius: 5px;
+  border: 1px solid var(--grey);
 }
 
 /* BUTTON */
@@ -93,8 +97,9 @@ button {
 }
 
 
+/* DESKTOP IMAGE */
 .desktop {
-  width: 80%;
+  width: 40%;
   margin-left: 20px;
 }
 
