@@ -8,7 +8,7 @@
   --white: #FFFFFF;
 
   /* Font */
-  --font-size-paragraph: 16px;
+  --font-size-paragraph: 14px;
   --font-family: 'Roboto';
   --font-weight: 400, 700;
 }
@@ -44,8 +44,9 @@ body {
 .layout {
   display: grid;
   place-content: center;
-  padding: 20px 70px 20px 20px;
+  padding: 40px 90px 40px 10px;
   line-height: 1.5;
+  width: 60%;
 }
 
 .form-container {
@@ -59,7 +60,7 @@ p, h1,li {
 
 .header {
   color: var(--charcoal-grey);
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -100,7 +101,7 @@ p,li {
 .email input[type="email"] {
   width: 100%;
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border-radius: 5px;
   border: 1px solid var(--grey);
 }
