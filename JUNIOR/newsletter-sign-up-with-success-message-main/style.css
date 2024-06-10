@@ -19,6 +19,7 @@
   box-sizing: border-box;
 }
 
+/* Body */
 body {
   font-family: var(--font-family);
   background-color: var(--dark-slate-grey);
@@ -28,20 +29,22 @@ body {
   line-height: 1.5;
 }
 
+/* Container */
 .container {
   display: grid;
   place-items: center;
   background-color: #fff;
   padding-left: 7%;
+  max-width: 50vw;
   max-height: 80vh;
   min-height: 40vh;
-  border-radius: 10px;
+  border-radius: 25px;
 }
 
 .layout {
   display: grid;
   place-content: center;
-  min-height: 100vh;
+  padding: 20px 70px 20px 20px;
   line-height: 1.5;
 }
 
@@ -49,13 +52,29 @@ body {
   display: flex;
 }
 
+/* LAYOUT */
 p, h1,li {
+  margin-bottom: 10px;
+}
+
+.header {
+  color: var(--charcoal-grey);
+  font-size: 3rem;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
 ul {
   list-style-type: none;
   margin-bottom: 10px;
+}
+
+.firstp {
+  margin-bottom: 20px;
+}
+
+p,li {
+  font-size: var(--font-size-paragraph);
 }
 
 /* EMAIL */
@@ -86,6 +105,13 @@ ul {
   border: 1px solid var(--grey);
 }
 
+/* LIST */
+.list {  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* BUTTON */
 button {
   background-color: var(--charcoal-grey);
@@ -94,13 +120,25 @@ button {
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
+  font-weight: var(--font-weight);
+}
+
+button:hover {
+  background-color: var(--dark-slate-grey);
+  cursor: pointer;
 }
 
 
-/* DESKTOP IMAGE */
+/* IMAGES */
 .desktop {
   width: 40%;
-  margin-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 12px;
+}
+
+.pic {
+  padding-right: 15px;
 }
 
 /* SUCCESS MESSAGE */
@@ -117,7 +155,15 @@ button {
 }
 
 
-
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: var(--grey);
+  font-size: 12px;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
