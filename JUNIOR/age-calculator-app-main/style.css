@@ -1,2 +1,47 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+/* Variables */
+:root {
+  --purple: hsl(259, 100%, 65%); /* Primary color for the website */
+  --light-red: hsl(0, 100%, 67%); /* Secondary color for the website */
+
+  --white: hsl(0, 0%, 100%); /* White color */
+  --off-white: hsl(0, 0%, 94%); /* Off-white color */
+  --light-grey: hsl(0, 0%, 86%); /* Light grey color */
+  --smokey-grey: hsl(0, 1%, 44%); /* Smokey grey color */
+  --off-black: hsl(0, 0%, 8%); /* Off-black color */
+
+  --body-copy-font-size: 32px; /* Font size for the body copy */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--body-copy-font-size);
+  color: var(--off-black);
+  background-color: var(--light-grey);
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--off-white);
+}
+
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
