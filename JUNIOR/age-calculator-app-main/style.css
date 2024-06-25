@@ -10,6 +10,8 @@
   --off-black: hsl(0, 0%, 8%); /* Off-black color */
 
   --body-copy-font-size: 32px; /* Font size for the body copy */
+
+  --tra-2: 0.2s; /* Transition time */
 }
 
 * {
@@ -36,26 +38,24 @@ article {
   background-color: var(--off-white);
   padding: 10px;
   border-radius: 10px;
-  min-width: 75%;
-  min-height: 45%;
+  min-width: 55%;
+  min-height: 55%;
 }
 
 .inputs {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
   gap: 10px;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin: 50px 120px 50px 40px;
   scrollbar-width: none;
 }
 
 .btn  {
   cursor: pointer;
-  position: absolute;
-  right: 15%;
-  top: 33%;
-  margin: 10px;
+  float: right;
+  margin: 0 0 1em 1em;
+  padding-bottom: 20%;
   background-color: var(--purple);
   border: none;
   border-radius: 50%;
