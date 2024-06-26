@@ -7,46 +7,53 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
   <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
   
   <title>Age calculator app</title>
 
 </head>
 <body>
-  <article>
-    <div class="container">
-      <section class="inputs">
-        <div>
-          <div>Day</div>
-          <div id="day">DD</div>
-        </div>
-
-        <div>
-          <div>Month</div>
-          <div id="month">MM</div>
-        </div>
-
-        <div>
-          <div>Year</div>
-          <div id="year">YYYY</div>
-        </div>
-      </section>
-
-      <hr>
-
-      <img class="btn" src="./assets/images/icon-arrow.svg" alt="">
-
-      <section class="result">
-        <span class="years"></span> years
-        <span class="months"></span> months
-        <span class="days"></span> days
-      </section>
+  <div class="container">
+    <form action="#" class="age-calc-form">
+      <div>
+        <label for="day-input">Day</label>
+        <input type="number" name="day" placeholder="DD" id="day-input" />
+        <span id="day-error-msg">error message</span>
+      </div>
+      <div>
+        <label for="month-input">month</label>
+        <input type="number" name="month" placeholder="MM" id="month-input" />
+        <span id="month-error-msg">error message</span>
+      </div>
+      <div>
+        <label for="year-input">year</label>
+        <input type="number" name="year" placeholder="YYYY" id="year-input" />
+        <span id="year-error-msg">error message</span>
+      </div>
+      <button type="submit" id="sumbit-btn">
+        <img src="./assets/images/icon-arrow.svg" alt="icon-arrow" />
+      </button>
+    </form>
+    <div class="result-container">
+      <div>
+        <span id="years-num">- -</span>
+        years
+      </div>
+      <div>
+        <span id="months-num">- -</span>
+        months
+      </div>
+      <div>
+        <span id="days-num">- -</span>
+        days
+      </div>
     </div>
-  </article>
-  
-  <div class="attribution">
-    Challenge by Frontend Mentor. 
-    Coded by Kebbell.
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>

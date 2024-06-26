@@ -1,102 +1,154 @@
-/* Variables */
 :root {
-  --purple: hsl(259, 100%, 65%); /* Primary color for the website */
-  --light-red: hsl(0, 100%, 67%); /* Secondary color for the website */
-
-  --white: hsl(0, 0%, 100%); /* White color */
-  --off-white: hsl(0, 0%, 94%); /* Off-white color */
-  --light-grey: hsl(0, 0%, 86%); /* Light grey color */
-  --smokey-grey: hsl(0, 1%, 44%); /* Smokey grey color */
-  --off-black: hsl(0, 0%, 8%); /* Off-black color */
-
-  --body-copy-font-size: 32px; /* Font size for the body copy */
-
-  --tra-2: 0.2s; /* Transition time */
+  --purple: hsl(259, 100%, 65%); /* main color */
+  --light-red: hsl(0, 100%, 67%); /* error */
+  --white: hsl(0, 0%, 100%); /* white */
+  --light-grey: hsl(0, 0%, 86%); /* body */
+  --smokey-grey: hsl(0, 1%, 44%); /* borders */
+  --off-black: hsl(0, 0%, 8%); /* black */
+  --tra-2: 0.2s;
 }
-
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  outline: 1px solid red;
 }
-
 body {
-  font-family: 'Poppins', sans-serif;
-  font-size: var(--body-copy-font-size);
-  color: var(--off-black);
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--light-grey);
 }
-
-article {
-  display: grid;
-  place-items: center;
-  height: 100vh;
-}
-
 .container {
-  background-color: var(--off-white);
-  padding: 10px;
-  border-radius: 10px;
-  min-width: 55%;
-  min-height: 55%;
+  width: 750px;
+  padding: 35px;
+  border-radius: 15px;
+  border-bottom-right-radius: 85px;
+  box-shadow: 4px 8px 12px rgb(0, 0, 0, 0.3);
+  background-color: var(--white);
 }
-
-.inputs {
+.container .age-calc-form {
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: space-between;
-  gap: 10px;
-  margin: 50px 120px 50px 40px;
-  scrollbar-width: none;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 45px;
+  padding-bottom: 35px;
+  border-bottom: 2px solid var(--light-grey);
 }
-
-.btn  {
-  cursor: pointer;
-  float: right;
-  margin: 0 0 1em 1em;
-  padding-bottom: 20%;
-  background-color: var(--purple);
-  border: none;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  padding: 14px;
+.age-calc-form > div {
+  display: flex;
+  flex-direction: column;
 }
-
-.btn:hover {
-  background-color: var(--off-black);
-  transition: 0ms ease-out;
+.age-calc-form > div label {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--smokey-grey);
 }
-
-.bttn {
-  cursor: pointer;
-  background-color: var(--purple);
-  border: none;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-}
-
-hr {
-  border: 1px solid var(--light-grey);
-  margin-bottom: 50px;
-}
-
-.result {
-  display: grid;
-  place-items: center;
-  gap: 10px;
-}
-
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  position: fixed;
-  left: 0;
-  bottom: 0;
+.age-calc-form > div input {
   width: 100%;
-  color: rgb(0, 0, 0);
-  text-align: center;
+  height: 48px;
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 8px;
+  border: 1px solid var(--light-grey);
+  outline: none;
+  color: var(--off-black);
+  caret-color: var(--purple);
+  transition: var(--tra-2);
+}
+.age-calc-form > div input::-webkit-outer-spin-button,
+.age-calc-form > div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.age-calc-form > div input:focus {
+  border-color: var(--purple);
+}
+.age-calc-form > div span {
+  font-size: 12px;
+  color: var(--light-red);
+  visibility: hidden;
+}
+.age-calc-form button[type="submit"] {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  right: 0px;
+  bottom: -30px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: var(--tra-2);
+  background: var(--purple);
+}
+.age-calc-form button[type="submit"]:hover {
+  background-color: var(--off-black);
+}
+.age-calc-form button[type="submit"] img {
+  width: 34px;
+  height: 34px;
+}
+.container .result-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container .result-container > div {
+  font-size: 64px;
+  font-weight: 900;
+  color: var(--off-black);
+}
+.container .result-container > div span {
+  font-size: 50px;
+  color: var(--purple);
+}
+
+/* Interact styling */
+.age-calc-form > div.invalid input {
+  border-color: var(--light-red);
+}
+.age-calc-form > div.invalid label {
+  color: var(--light-red);
+}
+.age-calc-form > div.invalid span {
+  visibility: visible;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+  .container .age-calc-form {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  .age-calc-form button[type="submit"] {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .container .result-container > div {
+    font-size: 54px;
+  }
+  .container .result-container > div span {
+    font-size: 40px;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    margin-block: 10px;
+  }
+  .container .result-container > div {
+    font-size: 38px;
+  }
+  .container .result-container > div span {
+    font-size: 30px;
+  }
 }
