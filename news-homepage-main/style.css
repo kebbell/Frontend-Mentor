@@ -50,7 +50,7 @@ ul {
 
 article {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
 
   grid-auto-columns: 1fr 1fr 1fr;
   grid-auto-colums: 375px;
@@ -58,7 +58,6 @@ article {
   padding: 30px 120px;
   width: 100%;
   margin: 0 auto;
-
 }
 
 .firstSection {
@@ -73,9 +72,20 @@ article {
 .secondSection {
   grid-column: 3 / span 1;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   gap: 20px;
-    padding-bottom: 20px;
+  padding-bottom: 20px;
+  background-color: var(--very-dark-blue);
+  color: var(--off-white);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--soft-orange);
+  padding-left: 20px;
+  padding-top: 15px;
 }
 
 .thirdSection {
