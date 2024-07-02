@@ -37,7 +37,7 @@ main {
 }
 
 nav {
-  padding: 20px 40px;
+  padding: 30px 120px;
 }
 
 ul {
@@ -50,11 +50,15 @@ ul {
 
 article {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 650px;
+  grid-auto-columns: 1fr 1fr 1fr;
+  grid-auto-colums: 375px;
   gap: 20px;
-  padding: 20px;
+  padding: 30px 120px;
   width: 100%;
+  margin: 0 auto;
+
 }
 
 .firstSection {
@@ -64,10 +68,16 @@ article {
   gap: 20px;
 }
 
-.thirdSection {
-  grid-row: 7 / span 3;
+.secondSection {
+  grid-column: 3 / span 1;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.thirdSection {
+  grid-column: 1 / span 3;
+  display: flex;
   gap: 20px;
 }
 
@@ -81,4 +91,5 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
+  font-size: 0.6rem;
 }
