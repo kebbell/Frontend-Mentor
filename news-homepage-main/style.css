@@ -1,61 +1,84 @@
+/* --------------------------------------------------------------------------
+ * Global Styles
+ * -------------------------------------------------------------------------- */
 :root {
   /* Colors */
 
   /* Primary */
-  --soft-orange: hsl(35, 77%, 62%);
-  --soft-red: hsl(5, 85%, 63%);
+  --soft-orange: hsl(35, 77%, 62%); /* Main color */
+  --soft-red: hsl(5, 85%, 63%); /* Accent color */
 
   /* Neutral */
-  --off-white: hsl(36, 100%, 99%);
-  --grayish-blue: hsl(233, 8%, 79%);
-  --dark-grayish-blue: hsl(236, 13%, 42%);
-  --very-dark-blue: hsl(240, 100%, 5%);
+  --off-white: hsl(36, 100%, 99%); /* Background color */
+  --grayish-blue: hsl(233, 8%, 79%); /* Text color */
+  --dark-grayish-blue: hsl(236, 13%, 42%); /* Link color */
+  --very-dark-blue: hsl(240, 100%, 5%); /* Border color */
 
   /* Sizing */
-  --mobile-width: 375px;
-  --desktop-width: 1440px;
+  --mobile-width: 375px; /* Mobile breakpoint */
+  --desktop-width: 1440px; /* Desktop breakpoint */
 }
 
+/* --------------------------------------------------------------------------
+ * Reset Styles
+ * -------------------------------------------------------------------------- */
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 2px solid red;
 }
 
+/* --------------------------------------------------------------------------
+ * Base Styles
+ * -------------------------------------------------------------------------- */
 body {
   font-family: "Inter", sans-serif;
   font-size: 15px;
   background-color: var(--off-white);
 }
 
+/* --------------------------------------------------------------------------
+ * Layout Styles
+ * -------------------------------------------------------------------------- */
 main {
   max-width: 1440px;
   margin: 0 auto;
 }
 
 nav {
-  padding: 30px 120px;
+  padding: 50px 180px 0 180px;
 }
 
-ul {
+.ul {
   display: flex;
+  flex-direction: row;
   justify-content: right;
+  align-items: center;
   gap: 20px;
   list-style: none;
-  margin-left: 50px;
+  margin-left: 100px;
+  max-height: 0px;
+  padding-bottom: 20px;
+  
+}
+
+.logo {
+  display: flex;
+  justify-content: left;
+  place-content: bottom;
+  margin-right: 50px;
+  top: 20px;
+
+  
 }
 
 article {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
-  grid-auto-columns: 1fr 1fr 1fr;
-  grid-auto-colums: 375px;
   gap: 20px;
-  padding: 30px 120px;
+  padding: 30px 180px;
   width: 100%;
   margin: 0 auto;
 }
@@ -75,17 +98,38 @@ article {
   justify-content: space-between;
   flex-direction: column;
   gap: 20px;
-  padding-bottom: 20px;
   background-color: var(--very-dark-blue);
   color: var(--off-white);
+  padding: 20px 20px 0px 20px;
 }
 
+.daddycontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+}
+
+/* --------------------------------------------------------------------------
+ * Typography Styles
+ * -------------------------------------------------------------------------- */
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--soft-orange);
-  padding-left: 20px;
-  padding-top: 15px;
+}
+
+.paragraph {
+  color: var(--grayish-blue);
+  line-height: 1.5rem;
+  border-bottom: 1px solid var(--grayish-blue);
+  font-size: 13px;
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  padding-bottom: 10px;
 }
 
 .thirdSection {
@@ -95,7 +139,7 @@ h1 {
 }
 
 .desktop {
-  width: 50%;
+  width: 100%;
 }
 
 .news-img {
@@ -112,6 +156,9 @@ h1 {
   justify-content: space-between;
 }
 
+/* --------------------------------------------------------------------------
+ * Footer Styles
+ * -------------------------------------------------------------------------- */
 footer {
   position: fixed;
   left: 0;
@@ -120,3 +167,4 @@ footer {
   text-align: center;
   font-size: 0.6rem;
 }
+
