@@ -110,6 +110,11 @@ article {
 
 }
 
+.section1 {
+display: flex;
+}
+
+
 /* --------------------------------------------------------------------------
  * Typography Styles
  * -------------------------------------------------------------------------- */
@@ -119,12 +124,33 @@ h1 {
   color: var(--soft-orange);
 }
 
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--very-dark-blue);
+}
+
 .paragraph {
   color: var(--grayish-blue);
   line-height: 1.5rem;
   border-bottom: 1px solid var(--grayish-blue);
   font-size: 13px;
   padding-bottom: 20px;
+}
+.readmore {
+  background-color: var(--soft-red);
+  border: none;
+  padding: 8.5px 20px;
+  border-radius: 3px;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--very-dark-blue);
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: bolder;
 }
 
 h2 {
