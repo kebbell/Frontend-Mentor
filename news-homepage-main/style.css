@@ -183,7 +183,7 @@ h1 {
 .paragraph {
   color: var(--grayish-blue);
   line-height: 1.5rem;
-  border-bottom: .75px solid var(--grayish-blue);
+  border-bottom: 0.75px solid var(--grayish-blue);
   font-size: 13px;
   padding-bottom: 20px;
 }
@@ -224,5 +224,5 @@ footer {
   text-align: center;
   color: var(--Very-dark-grayish-blue);
   font-size: 11px;
-  letter-spacing: 3px;  
+  letter-spacing: 3px;
 }
