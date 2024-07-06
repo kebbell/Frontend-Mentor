@@ -49,7 +49,7 @@ main {
 
 /* Nav */
 nav {
-  padding: 50px 180px 0 180px; 
+  padding: 50px 280px 0 180px;
 }
 
 .active {
@@ -62,9 +62,7 @@ nav {
   list-style: none;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
   gap: 20px;
-  list-style: none;
   margin-left: 100px;
   max-height: 0px;
   padding-bottom: 20px;
@@ -72,6 +70,7 @@ nav {
   color: var(--grayish-blue);
   font-size: 11px;
   letter-spacing: 3px;
+  width: 100%;
 }
 
 .logo {
@@ -133,6 +132,7 @@ article {
   display: flex;
   gap: 20px;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /* Desktop */
@@ -142,7 +142,8 @@ article {
 
 /* News Image */
 .news-img {
-  width: 80px;
+  width: 90px;
+  height: 110px;
 }
 
 /* Container 2 */
@@ -168,7 +169,6 @@ article {
 
 .display-4-container h2,
 .display-4-container h3 {
-  font-size: 18px;
 }
 
 /* --------------------------------------------------------------------------
@@ -176,21 +176,58 @@ article {
  * -------------------------------------------------------------------------- */
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--soft-orange);
 }
 
+.h2 {
+  font-size: 27px;
+  color: var(--soft-red);
+  font-weight: bold;
+}
+
+.h22 {
+  font-size: 18px;
+}
+
+.h3 {
+  font-size: 14px;
+  color: var(--very-dark-blue);
+  margin-bottom: 10px;
+  margin-top: 3px;
+  font-weight: bold;
+}
+
 .title {
-  font-size: 3rem;
+  font-size: 3.33rem;
   font-weight: 800;
   color: var(--very-dark-blue);
+
+}
+
+.titlep {
+  padding: 20px 0;
+  font-size: 12px;
+  color: var(--dark-grayish-blue);
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  padding-left: 50px;
+  padding-right: 20px;
+  margin-bottom: 5px;
+}
+
+.paragraph2 {
+  color: var(--grayish-blue);
+  line-height: 1.8rem;
+  border-bottom: 0.75px solid var(--grayish-blue);
+  font-size: 13px;
+  padding-bottom: 24px;
+  font-weight: light;
 }
 
 .paragraph {
-  color: var(--grayish-blue);
-  line-height: 1.5rem;
-  border-bottom: 0.75px solid var(--grayish-blue);
+  color: var(--dark-grayish-blue);
   font-size: 13px;
   padding-bottom: 20px;
 }
@@ -198,16 +235,17 @@ h1 {
 .readmore {
   background-color: var(--soft-red);
   border: none;
-  padding: 8.5px 20px;
+  padding: 14px 34px;
   border-radius: 3px;
+  margin-left: 50px;
 }
 
 .link {
   text-decoration: none;
   text-transform: uppercase;
   color: var(--very-dark-blue);
-  font-size: 11px;
-  letter-spacing: 3px;
+  font-size: 12px;
+  letter-spacing: 2px;
   font-weight: bolder;
 }
 
@@ -219,15 +257,10 @@ a {
 }
 
 h2 {
-  font-size: 18px;
   padding-bottom: 10px;
 }
 
-.titlep {
-  padding: 20px 0;
-  font-size: 13px;
-  color: var(--dark-grayish-blue);
-}
+
 
 /* --------------------------------------------------------------------------
  * Footer Styles
@@ -242,4 +275,5 @@ footer {
   color: var(--Very-dark-grayish-blue);
   font-size: 9px;
   letter-spacing: 3px;
+  margin-bottom: 10px;
 }
