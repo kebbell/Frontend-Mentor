@@ -188,15 +188,15 @@ h1 {
 }
 
 .h22 {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .h3 {
   font-size: 14px;
   color: var(--very-dark-blue);
   margin-bottom: 10px;
-  margin-top: 3px;
-  font-weight: bold;
+  margin-top: 2px;
+  font-weight: 800;
 }
 
 .title {
