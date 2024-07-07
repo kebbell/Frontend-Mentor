@@ -41,6 +41,28 @@ body {
 /* --------------------------------------------------------------------------
  * Layout Styles
  * -------------------------------------------------------------------------- */
+/* Main
+@media (max-width: 375px) {
+  main {
+    display: grid !important;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 375px;
+    margin: 0 auto;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  h1,
+  h2,
+  p {
+    font-size: 1.2rem;
+  }
+}
+ */
 
 main {
   max-width: 1440px;
@@ -167,10 +189,6 @@ article {
   font-size: 13px;
 }
 
-.display-4-container h2,
-.display-4-container h3 {
-}
-
 /* --------------------------------------------------------------------------
  * Typography Styles
  * -------------------------------------------------------------------------- */
@@ -203,7 +221,6 @@ h1 {
   font-size: 3.33rem;
   font-weight: 800;
   color: var(--very-dark-blue);
-
 }
 
 .titlep {
@@ -259,8 +276,6 @@ a {
 h2 {
   padding-bottom: 10px;
 }
-
-
 
 /* --------------------------------------------------------------------------
  * Footer Styles
