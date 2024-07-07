@@ -1,0 +1,48 @@
+
+/* Layout */
+
+/* The designs were created to the following widths: */
+/* - Mobile: 375px */
+/* - Desktop: 1440px */
+
+/* > 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens. */
+
+/* Colors */
+
+/* Primary */
+:root {
+  --primary-red: hsl(1, 90%, 64%);
+  --primary-blue: hsl(219, 85%, 26%);
+}
+
+/* Neutral */
+:root {
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-very-light-grayish-blue: hsl(210, 60%, 98%);
+  --neutral-light-grayish-blue-1: hsl(211, 68%, 94%);
+  --neutral-light-grayish-blue-2: hsl(205, 33%, 90%);
+  --neutral-grayish-blue: hsl(219, 14%, 63%);
+  --neutral-dark-grayish-blue: hsl(219, 12%, 42%);
+  --neutral-very-dark-blue: hsl(224, 21%, 14%);
+}
+
+/* Typography */
+
+/* Body Copy */
+:root {
+  --body-copy-font-size: 16px;
+}
+
+/* Font */
+:root {
+  --font-family-body-copy: 'Plus Jakarta Sans', sans-serif;
+  --font-weight-body-copy: 500;
+}
+
+
+
+
+
+
+  .attribution { font-size: 11px; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
