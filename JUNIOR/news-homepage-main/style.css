@@ -209,6 +209,11 @@ h1 {
   font-size: 16px;
 }
 
+.h22:hover, .paragraph2:hover {
+  color: var(--soft-orange);
+  cursor: pointer;
+}
+
 .h3 {
   font-size: 14px;
   color: var(--very-dark-blue);
@@ -255,6 +260,17 @@ h1 {
   padding: 14px 34px;
   border-radius: 3px;
   margin-left: 50px;
+}
+
+.readmore:hover {
+  background-color: var(--soft-red);
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--soft-red);
+}
+
+.h2:hover, .paragraph:hover, .h3:hover, .active:hover, .active2:hover {
+  color: var(--soft-red);
+  cursor: pointer;
 }
 
 .link {
