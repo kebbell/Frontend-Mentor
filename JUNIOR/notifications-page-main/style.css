@@ -1,52 +1,20 @@
+/* NEWBIE/notifications-page-main/style.css */
 
-/* 
-  Layout
-  ------------------------------------------------------------
-  The designs were created to the following widths:
-  - Mobile: 375px
-  - Desktop: 1440px
-
-  > 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
-*/
-
-/* 
-  Colors
-  ------------------------------------------------------------
-  Primary
-*/
 :root {
   --primary-red: hsl(1, 90%, 64%);
   --primary-blue: hsl(219, 85%, 26%);
-}
-
-/* 
-  Neutral
-*/
-:root {
   --neutral-white: hsl(0, 0%, 100%);
   --neutral-very-light-grayish-blue: hsl(210, 60%, 98%);
   --neutral-light-grayish-blue-1: hsl(211, 68%, 94%);
   --neutral-light-grayish-blue-2: hsl(205, 33%, 90%);
   --neutral-grayish-blue: hsl(219, 14%, 63%);
   --neutral-dark-grayish-blue: hsl(219, 12%, 42%);
-  --neutral-very-dark-blue: hsl(224, 21%, 14%);
-}
-
-/* 
-  Typography
-  ------------------------------------------------------------
-  Body Copy
-*/
-:root {
+  --neutral-very-dark-blue: hsl(224, 66%, 22%);
   --body-copy-font-size: 14px;
   --font-family-body-copy: 'Plus Jakarta Sans', sans-serif;
   --font-weight-body-copy: 500;
 }
 
-/* 
-  Global Styles
-  ------------------------------------------------------------
-*/
 * {
   margin: 0;
   padding: 0;
@@ -57,22 +25,14 @@ body {
   margin: 0;
   font-family: var(--font-family-body-copy);
   font-size: var(--body-copy-font-size);
-} 
+}
 
 .item-img {
   max-width: 70%;
 }
 
-/* 
-  Notifications Container
-  ------------------------------------------------------------
-*/
-
-
 .not-container {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
   flex-direction: column;
   width: 60%;
   margin: 10vh auto;
@@ -89,21 +49,30 @@ body {
 
 .not-item h3 {
   margin: 0;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .not-item p {
   margin: 0;
 }
 
-.not-item .not-count {
-  font-size: 0.8em;
-  color: var(--primary-red);
+.not-count {
+  font-weight: bold;
+  border: 1px solid var(--neutral-very-dark-blue);
+  background-color: var(--neutral-very-dark-blue);
+  color: var(--neutral-white);
+  padding: 1px 8px;
+  margin: 5px;
+  font-size: 20px;
+  border-radius: 20%;
 }
 
-/* 
-  Article Styles
-  ------------------------------------------------------------
-*/
+.not-item .not-count {
+  font-size: 0.8em;
+  color: var(--neutral-white);
+}
+
 article {
   display: grid;
   grid-template-columns: 10% 90%;
@@ -111,8 +80,7 @@ article {
     "name time"
     "name .";
   background-color: var(--neutral-very-light-grayish-blue);
-  margin: 1em;
-  flex: 0 0 50%;
+  margin: .75em 1em 0 1em;
   padding: 1em;
   height: min-content;
 }
@@ -126,10 +94,6 @@ article {
   text-align: right;
 }
 
-/* 
-  Items Container
-  ------------------------------------------------------------
-*/
 .items-container {
   display: grid;
   flex-direction: column;
@@ -144,36 +108,41 @@ article {
   padding: 1em;
 }
 
+.group {
+  color: var(--primary-blue);
+}
+
 .item h3 {
   margin: 0;
-  line-height: 1;
-  font-weight: var(--body-copy-font-size);
-  
+  line-height: 1.2;
+  font-weight: 300;
 }
 
 .itemp {
-  padding: 20px 10px;
+  padding: 30px 30px;
   margin-top: 20px;
   border: .5px solid var(--neutral-light-grayish-blue-2);
   line-height: 1.6;
 }
 
 .item .item-time {
-  font-size: 0.7em;
+  font-size: 0.8em;
   color: var(--neutral-grayish-blue);
   font-weight: 400;
-  letter-spacing: 1px;
 
+}
+
+.items-container :hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px 1px var(--neutral-light-grayish-blue-1);
+  transition: all 0.1s ease-in-out;
+  background-color: var(--neutral-light-grayish-blue-1);
 }
 
 .item span {
   font-weight: 700;
 }
 
-/* 
-  Attribution
-  ------------------------------------------------------------
-*/
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -182,5 +151,4 @@ article {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-
 
