@@ -39,24 +39,70 @@
   --font-weight-body-copy: 500;
 }
 
+/* Layout */
 
-.notification-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px solid red;
 }
-.notification-item {
+
+body {
+  margin: 0;
+  font-family: var(--font-family-body-copy);
+  font-weight: var(--font-weight-body-copy);
+  font-size: var(--body-copy-font-size);
+} 
+
+
+.not-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 60%;
+
+  background-color: var(--neutral-very-light-grayish-blue);
+  margin: 10vh auto;
+  padding: 1em;
+}
+
+.not-item {
   flex: 0 0 50%;
   padding: 1em;
 }
-.notification-item h3 {
+.not-item h3 {
   margin: 0;
 }
-.notification-item p {
+.not-item p {
+  margin: 0;
+}
+.not-item .not-count {
+  font-size: 0.8em;
+  color: var(--primary-red);
+}
+
+
+
+.items-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.item {
+  flex: 0 0 50%;
+  padding: 1em;
+}
+.item h3 {
+  margin: 0;
+}
+.item p {
   margin: 0;
   line-height: 1.6;
 }
-.notification-item .notification-time {
+.item .item-time {
   font-size: 0.8em;
   color: var(--primary-blue);
 }
@@ -67,5 +113,5 @@
 
 
 
-  .attribution { font-size: 11px; text-align: center; }
-  .attribution a { color: hsl(228, 45%, 44%); }
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
