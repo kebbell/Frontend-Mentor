@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic" rel="stylesheet" />
   
   <title>Notifications page</title>
 
@@ -17,48 +17,55 @@
   <div class="not-container">
     <div class="not-item">
       <h3><span class="noti-title">Notifications</span> <span class="not-count">3</span></h3>
-      <p>Mark all as read</p>
+      <p id="mark-all-as-read">Mark all as read</p>
     </div>
 
   <section class="items-container">
-    <article class="item">
+    <article class="item top-item" onclick="read(this)">
       <img class="item-img" src="./assets/images/avatar-mark-webber.webp" alt="Mark Webber">
       <h3><span>Mark Webber</span> reacted to your recent post <span>My first tournament today!</span></p>
       <span class="item-time">1m ago</span>
+      <span class="read-dot"></span>
     </article>
-    <article class="item">
+    <article class="item top-item" onclick="read(this)">
       <img class="item-img" src="./assets/images/avatar-angela-gray.webp" alt="Angela Gray">
       <h3><span>Angela Gray</span> followed you</p>
       <span class="item-time">5m ago</span>
+      <span class="read-dot"></span>
     </article>
-    <article class="item">
+    <article class="item top-item" onclick="read(this)">
       <img class="item-img" src="./assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson">
       <h3><span>Jacob Thompson</span> has joined your group <span class="group">Chess Club</span></p>
       <span class="item-time">1 day ago</span>
+      <span class="read-dot"></span>
     </article>
-    <article class="item">
+    <article class="item" onclick="read(this)">
       <img class="item-img" src="./assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin">
       <h3><span>Rizky Hasanuddin</span> sent you a private message</p>
       <span class="item-time">5 days ago</span>
       <p class="itemp">Hello, thanks for setting up the <span class="group">Chess Club</span>. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
-
+      <span class="read-dot"></span>
     </article>
-    <article class="item">
+    <article class="item" onclick="read(this)">
       <img class="item-img" src="./assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith">
       <h3><span>Kimberly Smith</span> commented on your picture</p>
       <span class="item-time">1 week ago</span>
+      <span class="read-dot"></span>
     </article>
-    <article class="item">
+    <article class="item" onclick="read(this)">
       <img class="item-img" src="./assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson">
       <h3><span>Nathan Peterson</span> reacted to your recent post <span>5 end-game strategies to increase your win rate</span></p>
       <span class="item-time">2 weeks ago</span>
+      <span class="read-dot"></span>
     </article>
-    <article class="item">
+    <article class="item" onclick="read(this)">
       <img class="item-img" src="./assets/images/avatar-anna-kim.webp" alt="Anna Kim">
       <h3><span>Anna Kim</span> left the group <span class="group">Chess Club</span></p>
       <span class="item-time">2 weeks ago</span>
+      <span class="read-dot"></span>
     </article>
   </section>
+  <script src="script.js"></script>
 </div>
   <div class="attribution">
     Challenge by Frontend Mentor. 
@@ -66,4 +73,10 @@
   </div>
 </body>
 </html>
+<script>
+  function read(item) {
+    let redDot = item.querySelector('.read-dot');
+    redDot.remove();
+  }
+</script>
 
