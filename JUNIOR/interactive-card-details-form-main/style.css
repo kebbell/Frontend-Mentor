@@ -1,9 +1,35 @@
+:root {
+  --linear-gradient-active-input-border: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  --input-error-red: hsl(0, 100%, 66%);
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+  --font-family-body-copy: 'Space Grotesk', sans-serif;
+  --body-copy-font-size: 18px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: var(--font-family-body-copy);
+  font-size: var(--body-copy-font-size);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--very-dark-violet);
+  background-image: url('images/bg-main-desktop.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 
 
 
