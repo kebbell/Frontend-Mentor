@@ -32,6 +32,37 @@ body {
 }
 
 
+.card-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "cardholder-name card-number"
+                       "exp-date cvc"
+}
+
+.cardholder-name {
+  grid-area: cardholder-name;
+} 
+
+.card-number {
+  grid-area: card-number;
+}
+
+.exp-date {
+  grid-area: exp-date;
+}
+
+.cvc {
+  grid-area: cvc;
+}
+
+.confirm {
+  grid-area: confirm;
+} 
+
+
+
+
 
   .attribution { font-size: 11px; text-align: center; }
   .attribution a { color: hsl(228, 45%, 44%); }
