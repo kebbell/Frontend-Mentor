@@ -13,6 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: .5px solid red;
 }
 
 body {
@@ -25,17 +26,22 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: var(--very-dark-violet);
+  background: var(--white);
   background-image: url('images/bg-main-desktop.png');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 35% 100%;
+}
+
+.card {
+  display: grid;
+  grid-template-areas: "card-details confirm"
+                       "card-details confirm"
+                       "card-details confirm"
 }
 
 
 .card-details {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas: "cardholder-name card-number"
                        "exp-date cvc"
 }
@@ -62,7 +68,7 @@ body {
 
 .completed-state {
   grid-area: completed-state;
-  display: hidden;
+  display: none;
 }
 
 footer {
@@ -71,5 +77,6 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
+  font-size: 12px;
 }
 
