@@ -1,11 +1,15 @@
 :root {
-  --linear-gradient-active-input-border: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  --linear-gradient-active-input-border: linear-gradient(
+    to right,
+    hsl(249, 99%, 64%),
+    hsl(278, 94%, 30%)
+  );
   --input-error-red: hsl(0, 100%, 66%);
   --white: hsl(0, 0%, 100%);
   --light-grayish-violet: hsl(270, 3%, 87%);
   --dark-grayish-violet: hsl(279, 6%, 55%);
   --very-dark-violet: hsl(278, 68%, 11%);
-  --font-family-body-copy: 'Space Grotesk', sans-serif;
+  --font-family-body-copy: "Space Grotesk", sans-serif;
   --body-copy-font-size: 18px;
 }
 
@@ -13,7 +17,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 body {
@@ -27,14 +30,13 @@ body {
   justify-content: center;
   min-height: 100vh;
   background: var(--white);
-  background-image: url('images/bg-main-desktop.png');
+  background-image: url("images/bg-main-desktop.png");
   background-repeat: no-repeat;
   background-size: 35% 100%;
 }
 
 .card {
   display: grid;
-
 }
 
 label {
@@ -46,14 +48,13 @@ label {
   color: var(--very-dark-violet);
 }
 
-
 .card-details {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  grid-template-areas: 
-  'cardholder-name card-number'
-  'exp-date cvc';
+  grid-template-areas:
+    "cardholder-name card-number"
+    "exp-date cvc";
   padding: 30px 0px 0 30px;
   width: 100%;
   margin-left: 80%;
@@ -61,31 +62,56 @@ label {
 
 .exp-date-field {
   width: 100%;
-  height : 40px;
+  height: 40px;
   margin-top: 8px;
   border: 1px solid var(--light-grayish-violet);
-  padding-left: 7px;
+  padding-left: 9px;
+}
+
+.exp-date-fieldER {
+  width: 40%;
+  height: 40px;
+  margin-top: 8px;
+  border: 1px solid var(--light-grayish-violet);
+  padding-left: 9px;
+}
+
+.exp-date-fieldER2 {
+  width: 182%;
+  height: 40px;
+  margin-top: 8px;
+  border: 1px solid var(--light-grayish-violet);
+  padding-left: 9px;
+}
+
+.exp-date-cvc {
+  display: flex;
+  width: 100%;
 }
 
 .cardholder-name {
   grid-area: cardholder-name;
-} 
+}
 
 .card-number {
   grid-area: card-number;
 }
 
 .exp-date {
+  width: 40%;
   grid-area: exp-date;
 }
 
 .cvc {
+  margin-top: 8px;
   grid-area: cvc;
+  display: flex;
+  flex-direction: column;
 }
 
 .confirm {
   width: 100%;
-} 
+}
 
 .completed-state {
   grid-area: completed-state;
@@ -109,4 +135,3 @@ footer {
   text-align: center;
   font-size: 12px;
 }
-
