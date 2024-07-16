@@ -38,7 +38,7 @@ body {
 .card {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 40px;
 }
 
 img {
@@ -47,6 +47,7 @@ img {
 
 .img-class {
   display: flex;
+  position: relative;
   flex-direction: column;
   gap: 20px;
   width: 100%;
@@ -58,17 +59,46 @@ img {
 }
 
 .left-card {
+  width: 105%;
   justify-self: start;
   align-self: start;
+}
+
+.leftp {
+  position: absolute;
+  bottom: 67%;
+  left: 6%;
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.left-logo {
+  position: absolute;
+  top: 6%;
+  left: 6%;
 }
 
 .right {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
   border-radius: 15px;
+
 }
 
 .right-card {
-  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 105%;
+}
+
+.rightp {
+  position: absolute;
+  bottom: 20.5%;
+  right: 6%;
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 100;
 }
 
 
