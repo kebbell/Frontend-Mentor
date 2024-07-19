@@ -9,27 +9,21 @@ const cvcInput = document.querySelector("#cvc");
 const confirmButton = document.querySelector("button[type='submit']");
 const completedState = document.querySelector(".completed-state");
 const continueButton = completedState.querySelector("button[type='button']");
-const inputField = document.getElementById("input-field");
 const inputs = document.querySelectorAll(".exp-date-field, #card-number, #name, #cvc");
 
-// Function to check if all input fields are filled
 function checkInputsFilled() {
-  const inputs = document.querySelectorAll(".exp-date-field");
   return Array.from(inputs).every((input) => input.value.trim() !== "");
 }
 
-// Function to add a space after every 4 numbers in the card number input
 function addSpaceToCardNumber(input) {
   const value = input.value.replace(/\s/g, "");
   const parts = value.match(/\d{1,4}/g);
-
   if (parts) {
     input.value = parts.join(" ");
     input.selectionStart = input.selectionEnd = input.value.length;
   }
 }
 
-// Function to handle confirm button click
 function handleConfirmButtonClick() {
   if (checkInputsFilled()) {
     card.style.display = "none";
@@ -39,19 +33,14 @@ function handleConfirmButtonClick() {
   }
 }
 
-// Add event listener to the confirm button
 confirmButton.addEventListener("click", handleConfirmButtonClick);
 
-// Add event listener to the card number input
-cardNumberInput.addEventListener("input", () => {
-  addSpaceToCardNumber(cardNumberInput);
+cardNumberInput.addEventListener("input", () => addSpaceToCardNumber(cardNumberInput));
+
+continueButton.addEventListener("click", () => {
+  card.style.display = "block"; // Ensure card is shown by setting display to block
+  completedState.style.display = "none"; // Hide the completed state
+  inputs.forEach((input) => input.value = ""); // Clear the input fields
 });
-// Add event listener to the continue button
-continueButton.addEventListener("click", function () {
-  // Hide the completed state
-  completedState.style.display = "none";
-  card.style.display = "";
-  // Clear the input fields
-  inputs.forEach((input) => (input.value = ""));
-});
+
 
