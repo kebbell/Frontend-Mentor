@@ -70,7 +70,25 @@ img {
   left: 6%;
   color: var(--white);
   font-size: 24px;
-  font-weight: 100;
+  font-weight: lighter;
+}
+
+.leftpname {
+  position: absolute;
+  bottom: 60%;
+  left: 6%;
+  color: var(--white);
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.leftpdate {
+  position: absolute;
+  bottom: 60%;
+  left: 68%;
+  color: var(--white);
+  font-size: 12px;
+  font-weight: lighter;
 }
 
 .left-logo {
@@ -80,7 +98,7 @@ img {
 }
 
 .right {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(210, 59, 59, 0.09) 0px -3px 5px;;
   border-radius: 15px;
 
 }
@@ -94,14 +112,19 @@ img {
 
 .rightp {
   position: absolute;
-  bottom: 20.5%;
+  bottom: 22%;
   right: 6%;
   color: var(--white);
-  font-size: 24px;
-  font-weight: 100;
+  font-size: 14px;
+  font-weight: lighter;
 }
 
+.leftp, .rightp, .leftpname, .leftpdate {
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: lighter;
 
+}
 
 .card-details {
   margin-left: 1rem;
