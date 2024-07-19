@@ -1,6 +1,5 @@
 "use strict";
 
-// DOM elements
 const card = document.querySelector(".card");
 const nameInput = document.querySelector("#name");
 const cardNumberInput = document.querySelector("#card-number");
@@ -9,7 +8,9 @@ const expYearInput = document.querySelector("#exp-year");
 const cvcInput = document.querySelector("#cvc");
 const confirmButton = document.querySelector("button[type='submit']");
 const completedState = document.querySelector(".completed-state");
-const continueButton = document.querySelector(".completed-state button[type='button']");
+const continueButton = completedState.querySelector("button[type='button']");
+const inputField = document.getElementById("input-field");
+const inputs = document.querySelectorAll(".exp-date-field, #card-number, #name, #cvc");
 
 // Function to check if all input fields are filled
 function checkInputsFilled() {
@@ -44,5 +45,13 @@ confirmButton.addEventListener("click", handleConfirmButtonClick);
 // Add event listener to the card number input
 cardNumberInput.addEventListener("input", () => {
   addSpaceToCardNumber(cardNumberInput);
+});
+// Add event listener to the continue button
+continueButton.addEventListener("click", function () {
+  // Hide the completed state
+  completedState.style.display = "none";
+  card.style.display = "";
+  // Clear the input fields
+  inputs.forEach((input) => (input.value = ""));
 });
 
