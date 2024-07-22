@@ -24,3 +24,110 @@ body {
   justify-content: center;
 }
 
+
+
+.bank-balance-container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  background-color: var(--soft-red);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  margin-bottom: 20px;
+}
+
+.bank-balance-container img {
+  width: 4.75rem;
+}
+
+.balance-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.balance-details h2 {
+  color: var(--very-pale-orange);
+  font-size: 1rem;
+}
+
+.balance-details h1 {
+  color: var(--very-pale-orange);
+  font-size: 2.5rem;
+}
+
+.bank-chart-container {
+  background-color: var(--very-pale-orange);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  margin-bottom: 20px;
+}
+
+.bank-chart-container h2 {
+  color: var(--medium-brown);
+  font-size: 2.5rem;
+} 
+
+.bank-chart {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.bank-chart-item {
+  height: 5rem;
+  width: 100%;
+  background-color: var(--soft-red);
+  border-radius: 1rem;
+}
+
+.bank-chart-day {
+  color: var(--medium-brown);
+  font-size: 0.7rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.bank-total-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--dark-brown);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.bank-total-container h2 {
+  color: var(--very-pale-orange);
+  font-size: 1rem;
+}
+
+.bank-total-container h1 {
+  color: var(--very-pale-orange);
+  font-size: 1rem;
+}
+
+.bank-total-container h3 {
+  color: var(--cyan);
+  font-size: 1rem;
+}
+
+.bank-total-container h4 {
+  color: var(--cyan);
+  font-size: 1rem;
+}
+
+footer {
+  margin-top: 5rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--dark-brown);
+  color: var(--very-pale-orange);
+  font-size: 0.8rem;
+  padding: 1rem;
+  text-align: center;
+}
