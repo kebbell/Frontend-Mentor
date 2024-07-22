@@ -1,64 +1,54 @@
 "use strict";
 
-const c = document.querySelector(".chart-container");
-const cd = document.querySelectorAll(".chart-day");
-const ci = document.querySelectorAll(".chart-item");
-const ct = document.querySelector(".chart-total");
-const cat = document.querySelector(".chart-total-amount");
-const ctp = document.querySelector(".chart-total-percentage");
-const ctc = document.querySelector(".chart-total-container");
-const ctt = document.querySelector(".chart-total-title");
-const catn = document.querySelector(".chart-total-number");
-const ctpn = document.querySelector(".chart-total-percentage-number");
-const ctps = document.querySelector(".chart-total-percentage-symbol");
+document.addEventListener("DOMContentLoaded", function() {
 
-// CHART DATA
+  const chartContainer = document.querySelector(".chart-container");
+  const chartDays = document.querySelectorAll(".chart-day");
+  const chartItems = document.querySelectorAll(".chart-item");
+  const chartTotal = document.querySelector(".chart-total");
+  const chartTotalAmount = document.querySelector(".chart-total-amount");
+  const chartTotalPercentage = document.querySelector(".chart-total-percentage");
+  const chartTotalContainer = document.querySelector(".chart-total-container");
+  const chartTotalTitle = document.querySelector(".chart-total-title");
+  const chartTotalNumber = document.querySelector(".chart-total-number");
+  const chartTotalPercentageNumber = document.querySelector(".chart-total-percentage-number");
+  const chartTotalPercentageSymbol = document.querySelector(".chart-total-percentage-symbol");
 
-const chartData = [
-  {
-    day: "mon",
-    amount: 17.45,
-  },
-  {
-    day: "tue",
-    amount: 34.91,
-  },
-  {
-    day: "wed",
-    amount: 52.36,
-  },
-  {
-    day: "thu",
-    amount: 31.07,
-  },
-  {
-    day: "fri",
-    amount: 23.39,
-  },
-  {
-    day: "sat",
-    amount: 43.28,
-  },
-  {
-    day: "sun",
-    amount: 25.48,
-  },
-];
+  // CHART DATA
 
-// CHART SETUP
+  const scriptElement = document.querySelector("script[type='application/json']");
+  let chartData = scriptElement ? JSON.parse(scriptElement.textContent) : null;
+  console.log(chartData);
 
+  // CHART SETUP
 
-
-const chartSetup = () => {
-  let total = 0;
-  let percentage = 0;
-  for (let i = 0; i < chartData.length; i++) {
-    total += chartData[i].amount;
+  function chartSetup() {
+    if (!chartData) {
+      console.log("chartData is not iterable");
+      return;
+    }
+    let total = 0;
+    let percentage = 0;
+    for (const data of chartData) {
+      total += data.amount;
+    }
+    percentage = Math.round((total / 2000) * 100);
+    chartTotalNumber.textContent = `$${total.toFixed(2)}`;
+    chartTotalPercentageNumber.textContent = `${percentage}%`;
   }
-  percentage = Math.round((total / 2000) * 100);
-  ctpn.textContent = percentage;
-  ctps.textContent = "%";
-  catn.textContent = `$${total.toFixed(2)}`;
-};
 
-chartSetup();
+  chartSetup();
+
+  if (!chartData) {
+    console.log("chartData is not iterable");
+    return;
+  }
+
+  chartData.forEach((data, index) => {
+    const chartItemHeight = (data.amount / 2000) * 200; // Assuming the maximum amount is 2000 and the maximum height is 200px
+    chartItems[index].style.height = `${chartItemHeight}px`;
+    chartItems[index].setAttribute('data-tooltip', `$${data.amount.toFixed(2)}`);
+  });
+
+});
+
