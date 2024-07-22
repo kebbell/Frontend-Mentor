@@ -9,7 +9,9 @@ const cvcInput = document.querySelector("#cvc");
 const confirmButton = document.querySelector("button[type='submit']");
 const completedState = document.querySelector(".completed-state");
 const continueButton = completedState.querySelector("button[type='button']");
-const inputs = document.querySelectorAll(".exp-date-field, #card-number, #name, #cvc");
+const inputs = document.querySelectorAll(
+  ".exp-date-field, #card-number, #name, #cvc"
+);
 
 function checkInputsFilled() {
   return Array.from(inputs).every((input) => input.value.trim() !== "");
@@ -24,7 +26,8 @@ function addSpaceToCardNumber(input) {
   }
 }
 
-function handleConfirmButtonClick() {
+function handleConfirmButtonClick(event) {
+  event.preventDefault();
   if (checkInputsFilled()) {
     card.style.display = "none";
     completedState.style.display = "block";
@@ -35,12 +38,14 @@ function handleConfirmButtonClick() {
 
 confirmButton.addEventListener("click", handleConfirmButtonClick);
 
-cardNumberInput.addEventListener("input", () => addSpaceToCardNumber(cardNumberInput));
+cardNumberInput.addEventListener("input", () =>
+  addSpaceToCardNumber(cardNumberInput)
+);
 
 continueButton.addEventListener("click", () => {
-  card.style.display = "block"; // Ensure card is shown by setting display to block
-  completedState.style.display = "none"; // Hide the completed state
-  inputs.forEach((input) => input.value = ""); // Clear the input fields
+  card.style.display = "block";
+  completedState.style.display = "none";
+  inputs.forEach((input) => {
+    input.value = "";
+  });
 });
-
-
