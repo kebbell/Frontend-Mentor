@@ -47,6 +47,8 @@ const chartData = [
 
 // CHART SETUP
 
+
+
 const chartSetup = () => {
   let total = 0;
   let percentage = 0;

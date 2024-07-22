@@ -22,11 +22,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  letter-spacing: 1px;
 }
 
 
 
-.bank-balance-container {
+.balance-container {
   display: flex;
   align-items: start;
   justify-content: space-between;
@@ -36,7 +37,7 @@ body {
   margin-bottom: 20px;
 }
 
-.bank-balance-container img {
+.balance-container img {
   width: 4.75rem;
 }
 
@@ -48,86 +49,108 @@ body {
 
 .balance-details h2 {
   color: var(--very-pale-orange);
-  font-size: 1rem;
+  font-size: .75rem;
+  font-weight: 400;
 }
 
 .balance-details h1 {
   color: var(--very-pale-orange);
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 4px;
 }
 
-.bank-chart-container {
+.chart-container {
   background-color: var(--very-pale-orange);
   padding: 1rem 2rem;
   border-radius: 1rem;
   margin-bottom: 20px;
 }
 
-.bank-chart-container h2 {
-  color: var(--medium-brown);
-  font-size: 2.5rem;
+.chart-container h2 {
+  color: var(--dark-brown);
+  font-size: 1.25rem;
 } 
 
-.bank-chart {
+.chart {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.bank-chart-item {
-  height: 5rem;
-  width: 100%;
+.chart-item {
+  height: 7rem;
+  width: 40px;
   background-color: var(--soft-red);
-  border-radius: 1rem;
+  border-radius: .25rem;
+  margin-top: 1rem;
+}
+.chart-item:hover {
+  cursor: pointer;
+  background-color: var(--cyan);
+  position: relative;
 }
 
-.bank-chart-day {
+.chart-item:hover:after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--white);
+  padding: .5rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-day {
   color: var(--medium-brown);
   font-size: 0.7rem;
   text-align: center;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.bank-total-container {
+.total-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--dark-brown);
+  background-color: var(--very-pale-orange);
   padding: 1rem 2rem;
   border-radius: 1rem;
   margin-top: 1rem;
+  padding-bottom: 40px 0 40px 0;
 }
 
-.bank-total-container h2 {
+.total-container h2 {
+  color: var(--dark-brown);
+  font-size: 1rem;
+}
+
+.total-container h1 {
   color: var(--very-pale-orange);
   font-size: 1rem;
 }
 
-.bank-total-container h1 {
-  color: var(--very-pale-orange);
-  font-size: 1rem;
-}
-
-.bank-total-container h3 {
+.total-container h3 {
   color: var(--cyan);
   font-size: 1rem;
 }
 
-.bank-total-container h4 {
+.total-container h4 {
   color: var(--cyan);
   font-size: 1rem;
 }
 
 footer {
-  margin-top: 5rem;
+  margin-top: 4rem;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: var(--dark-brown);
   color: var(--very-pale-orange);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   padding: 1rem;
   text-align: center;
 }
