@@ -5,7 +5,7 @@
   --medium-brown: hsl(28, 10%, 53%);
   --cream: hsl(27, 66%, 92%);
   --very-pale-orange: hsl(33, 100%, 98%);
-  
+
   font-size: 18px;
 }
 
@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   background-color: var(--cream);
   min-height: 100vh;
   display: flex;
@@ -24,8 +24,6 @@ body {
   justify-content: center;
   letter-spacing: 1px;
 }
-
-
 
 .balance-container {
   display: flex;
@@ -49,7 +47,7 @@ body {
 
 .balance-details h2 {
   color: var(--very-pale-orange);
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 400;
 }
 
@@ -70,7 +68,7 @@ body {
 .chart-container h2 {
   color: var(--dark-brown);
   font-size: 1.25rem;
-} 
+}
 
 .chart-row {
   display: grid;
@@ -83,7 +81,7 @@ body {
   height: 7rem;
   width: 40px;
   background-color: var(--soft-red);
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   margin-top: 1rem;
 }
 .chart-item:hover {
@@ -99,10 +97,26 @@ body {
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--white);
-  padding: .5rem;
-  border-radius: .25rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.chart-item:hover:after {
+  content: attr(data-tooltip);
+  color: var(--white);
+  position: absolute;
+  width: 40px;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(33, 33, 33);
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  z-index: 1;
+}
+
 
 .chart-day {
   color: var(--medium-brown);
@@ -124,7 +138,7 @@ body {
 
 .total-container h2 {
   color: var(--medium-brown);
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 400;
 }
 
@@ -145,11 +159,13 @@ body {
 
 .total-container h4 {
   color: var(--medium-brown);
-  font-size: .65rem;
+  font-size: 0.65rem;
   font-weight: 400;
 
   padding-bottom: 10px;
 }
+
+
 
 footer {
   margin-top: 4rem;

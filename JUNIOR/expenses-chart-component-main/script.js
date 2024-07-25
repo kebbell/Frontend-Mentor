@@ -16,39 +16,74 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // CHART DATA
 
-  const scriptElement = document.querySelector("script[type='application/json']");
-  let chartData = scriptElement ? JSON.parse(scriptElement.textContent) : null;
-  console.log(chartData);
+  // const chartData = [
+  //   { day: "mon", amount: 17 },
+  //   { day: "tue", amount: 24 },
+  //   { day: "wed", amount: 9 },
+  //   { day: "thu", amount: 16 },
+  //   { day: "fri", amount: 17 },
+  //   { day: "sat", amount: 23 },
+  //   { day: "sun", amount: 25 },
+  // ];
+  // console.log(chartData);
+
+
+  const chartData = [
+    { day: "mon", amount: 17 },
+    { day: "tue", amount: 24 },
+    { day: "wed", amount: 9 },
+    { day: "thu", amount: 16 },
+    { day: "fri", amount: 17 },
+    { day: "sat", amount: 23 },
+    { day: "sun", amount: 25 },
+  ];
 
   // CHART SETUP
 
   function chartSetup() {
-    if (!chartData) {
+    if (!chartData || !chartData.length) {
       console.log("chartData is not iterable");
       return;
     }
+  
     let total = 0;
     let percentage = 0;
+  
     for (const data of chartData) {
       total += data.amount;
     }
+  
     percentage = Math.round((total / 2000) * 100);
+  
+    chartTotalNumber.textContent = `$${total.toFixed(2)}`;
+    chartTotalPercentageNumber.textContent = `${percentage}%`;
+  }
+  
+  chartSetup();
+  
+  // CHART RENDER
+  
+  function chartRender() {
+    if (!chartData || !chartData.length) {
+      console.log("chartData is not iterable");
+      return;
+    }
+  
+    let total = 0;
+    let percentage = 0;
+  
+    for (const data of chartData) {
+      total += data.amount;
+    }
+  
+    percentage = Math.round((total / 2000) * 100);
+  
     chartTotalNumber.textContent = `$${total.toFixed(2)}`;
     chartTotalPercentageNumber.textContent = `${percentage}%`;
   }
 
-  chartSetup();
 
-  if (!chartData) {
-    console.log("chartData is not iterable");
-    return;
-  }
-
-  chartData.forEach((data, index) => {
-    const chartItemHeight = (data.amount / 2000) * 200; // Assuming the maximum amount is 2000 and the maximum height is 200px
-    chartItems[index].style.height = `${chartItemHeight}px`;
-    chartItems[index].setAttribute('data-tooltip', `$${data.amount.toFixed(2)}`);
-  });
-
+  chartRender();
 });
+
 
