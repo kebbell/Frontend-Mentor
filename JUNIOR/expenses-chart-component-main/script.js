@@ -45,8 +45,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  chartRender();
+  window.addEventListener("resize", () => {
+    const chartItemHeights = [];
+    chartItems.forEach((item) => {
+      chartItemHeights.push(item.getBoundingClientRect().height);
+    });
+
+    chartItems.forEach((item, index) => {
+      item.style.height = `${chartItemHeights[index]}px`;
+    });
+  });
 });
 
-
-window.addEventListener("resize", chartRender);
