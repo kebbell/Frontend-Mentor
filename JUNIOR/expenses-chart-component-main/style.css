@@ -179,19 +179,3 @@ footer {
   padding: 1rem;
   text-align: center;
 }
-
-/* Remove the gap between inline elements */
-footer, footer * {
-  line-height: 0;
-  vertical-align: bottom;
-}
-
-/* Remove the gap between inline elements */
-footer, footer * {
-  margin: 0;
-}
-
-/* Remove the gap between inline elements */
-footer, footer * {
-  padding: 0;
-}
