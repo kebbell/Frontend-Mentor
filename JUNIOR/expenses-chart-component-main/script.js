@@ -17,9 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let total = 0;
     let percentage = 0;
 
-    for (const data of chartData) {
+    chartData.forEach((data) => {
       total += data.amount;
-    }
 
     percentage = Math.round((total / 2000) * 100);
 
@@ -45,15 +44,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  window.addEventListener("resize", () => {
-    const chartItemHeights = [];
-    chartItems.forEach((item) => {
-      chartItemHeights.push(item.getBoundingClientRect().height);
+  window.addEventListener("resize", chartRender);
     });
 
-    chartItems.forEach((item, index) => {
-      item.style.height = `${chartItemHeights[index]}px`;
+  chartItems.forEach((item) => {
+    item.addEventListener("mouseover", function () {
+      const tooltip = item.querySelector(".tooltip");
+      if (tooltip) {
+        tooltip.style.display = "block";
+      }
     });
   });
-});
+
+  chartRender();
+
+  function reloadPage() {
+    window.location.reload();
+  }
 
