@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+  
 
     document.querySelector(
   window.addEventListener("resize", chartRender));
