@@ -19,8 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     chartData.forEach((data) => {
       total += data.amount;
-
-    percentage = Math.round((total / 2000) * 100);
+      percentage = Math.round((total / 2000) * 100);
 
     document.querySelector(
       ".chart-total-number"
@@ -30,7 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
     ).textContent = `${percentage}%`;
   }
 
-  chartSetup();
+    window.addEventListener("load", chartSetup);
+
+  function reloadPageOnAnyClick(event) {
+    if (event.target.classList.contains("chart-item")) {
+      window.location.reload();
+    }
 
   function chartRender() {
     chartItems.forEach((item, index) => {
@@ -44,8 +48,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  window.addEventListener("resize", chartRender);
-    });
+    document.querySelector(
+  window.addEventListener("resize", chartRender));
+
+  function reloadPage() {
+    window.location.reload();
+  }
+
+  document.addEventListener("click", reloadPageOnAnyClick);
+
+  }
+
+  // Add tooltips
 
   chartItems.forEach((item) => {
     item.addEventListener("mouseover", function () {
@@ -61,4 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function reloadPage() {
     window.location.reload();
   }
+
+  document.addEventListener("click", reloadPageOnAnyClick);
+});
 
