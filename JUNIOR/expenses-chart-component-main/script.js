@@ -1,3 +1,4 @@
+
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -14,12 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   function chartSetup() {
-    let total = 0;
-    let percentage = 0;
-
-    chartData.forEach((data) => {
-      total += data.amount;
-      percentage = Math.round((total / 2000) * 100);
+    let total = chartData.reduce((acc, data) => acc + data.amount, 0);
+    let percentage = Math.round((total / 2000) * 100);
 
     document.querySelector(
       ".chart-total-number"
@@ -28,13 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
       ".chart-total-percentage-number"
     ).textContent = `${percentage}%`;
   }
-
-    window.addEventListener("load", chartSetup);
-
-  function reloadPageOnAnyClick(event) {
-    if (event.target.classList.contains("chart-item")) {
-      window.location.reload();
-    }
 
   function chartRender() {
     chartItems.forEach((item, index) => {
@@ -47,20 +37,17 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-  
 
-    document.querySelector(
-  window.addEventListener("resize", chartRender));
+  window.addEventListener("load", chartSetup); // Adjust the scale as needed
+  window.addEventListener("resize", chartRender);
 
-  function reloadPage() {
-    window.location.reload();
+  function reloadPageOnAnyClick(event) {
+    if (event.target.classList.contains("chart-item")) {
+      window.location.reload();
+    }
   }
 
   document.addEventListener("click", reloadPageOnAnyClick);
-
-  }
-
-  // Add tooltips
 
   chartItems.forEach((item) => {
     item.addEventListener("mouseover", function () {
@@ -69,14 +56,13 @@ document.addEventListener("DOMContentLoaded", function () {
         tooltip.style.display = "block";
       }
     });
+    item.addEventListener("mouseout", function () {
+      const tooltip = item.querySelector(".tooltip");
+      if (tooltip) {
+        tooltip.style.display = "none";
+      }
+    });
   });
 
   chartRender();
-
-  function reloadPage() {
-    window.location.reload();
-  }
-
-  document.addEventListener("click", reloadPageOnAnyClick);
 });
-
