@@ -1,52 +1,29 @@
-
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
   const chartItems = document.querySelectorAll(".chart-item");
 
   const chartData = [
-    { day: "mon", amount: 17 },
-    { day: "tue", amount: 24 },
-    { day: "wed", amount: 9 },
-    { day: "thu", amount: 16 },
-    { day: "fri", amount: 17 },
-    { day: "sat", amount: 23 },
-    { day: "sun", amount: 25 },
+    { day: "mon", amount: 57.00 },
+    { day: "tue", amount: 29.90 },
+    { day: "wed", amount: 50.20 },
+    { day: "thu", amount: 85.80 },
+    { day: "fri", amount: 57.90 },
+    { day: "sat", amount: 67.90 },
+    { day: "sun", amount: 24.80 },
   ];
 
   function chartSetup() {
-    let total = chartData.reduce((acc, data) => acc + data.amount, 0);
-    let percentage = Math.round((total / 2000) * 100);
-
-    document.querySelector(
-      ".chart-total-number"
-    ).textContent = `$${total.toFixed(2)}`;
-    document.querySelector(
-      ".chart-total-percentage-number"
-    ).textContent = `${percentage}%`;
-  }
-  chartSetup();
-
-  function chartRender() {
+    const maxAmount = Math.max(...chartData.map(data => data.amount));
     chartItems.forEach((item, index) => {
       const amount = chartData[index].amount;
-      const scaleFactor = 70 / 2000;
-      const height = (amount * scaleFactor).toFixed(2) + "px";
-      item.style.height = height;
+      const height = (amount / maxAmount) * 150; // Increase the multiplier for larger height
+      item.style.height = `${height}px`;
+      item.dataset.tooltip = `$${amount.toFixed(2)}`;
     });
   }
 
-  chartRender();
+  chartSetup();
 
-  window.addEventListener("load", chartSetup);
-  window.addEventListener("resize", chartRender);
-
-  function reloadPageOnAnyClick(event) {
-    if (event.target.classList.contains("chart-item")) {
-      window.location.reload();
-    }
-  }
-
-  document.addEventListener("click", reloadPageOnAnyClick);
+  window.addEventListener("resize", chartSetup);
 });
-

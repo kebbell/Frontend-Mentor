@@ -68,22 +68,24 @@ body {
 
 .chart-container h2 {
   color: var(--dark-brown);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }
 
 .chart-row {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
 }
 
 .chart-item {
   width: 40px;
   background-color: var(--soft-red);
   border-radius: 0.25rem;
-  margin-top: 1rem;
   position: relative;
+  align-self: flex-end;
+
 }
 .chart-item:hover {
   cursor: pointer;
@@ -130,14 +132,14 @@ body {
 }
 
 .total-container h1 {
-  color: var (--dark-brown);
+  color: var(--dark-brown);
   font-size: 2rem;
   font-weight: 600;
   padding: 10px 0;
 }
 
 .total-container h3 {
-  color: var (--dark-brown);
+  color: var(--dark-brown);
   font-size: 1rem;
   font-weight: 700;
   padding: 10px 0;
