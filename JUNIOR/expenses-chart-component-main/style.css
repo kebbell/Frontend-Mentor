@@ -72,11 +72,18 @@ body {
   margin-top: 1rem;
 }
 
+.chart-row1 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+  margin-top: 2.75rem;
+}
+
 .chart-row {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 1rem;
-  margin-top: 2.5rem;
+  margin-top: 1rem;
 }
 
 .chart-item {
