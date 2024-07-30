@@ -25,20 +25,20 @@ document.addEventListener("DOMContentLoaded", function () {
       ".chart-total-percentage-number"
     ).textContent = `${percentage}%`;
   }
+  chartSetup();
 
   function chartRender() {
     chartItems.forEach((item, index) => {
       const amount = chartData[index].amount;
-      item.style.height = `${(amount / 2000) * 100}%`; // Adjust the scale as needed
-
-      const tooltip = item.querySelector(".tooltip");
-      if (tooltip) {
-        tooltip.textContent = chartData[index].amount;
-      }
+      const scaleFactor = 70 / 2000;
+      const height = (amount * scaleFactor).toFixed(2) + "px";
+      item.style.height = height;
     });
   }
 
-  window.addEventListener("load", chartSetup); // Adjust the scale as needed
+  chartRender();
+
+  window.addEventListener("load", chartSetup);
   window.addEventListener("resize", chartRender);
 
   function reloadPageOnAnyClick(event) {
@@ -48,21 +48,5 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.addEventListener("click", reloadPageOnAnyClick);
-
-  chartItems.forEach((item) => {
-    item.addEventListener("mouseover", function () {
-      const tooltip = item.querySelector(".tooltip");
-      if (tooltip) {
-        tooltip.style.display = "block";
-      }
-    });
-    item.addEventListener("mouseout", function () {
-      const tooltip = item.querySelector(".tooltip");
-      if (tooltip) {
-        tooltip.style.display = "none";
-      }
-    });
-  });
-
-  chartRender();
 });
+
