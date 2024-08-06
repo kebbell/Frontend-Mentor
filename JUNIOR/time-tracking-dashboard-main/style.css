@@ -1,0 +1,113 @@
+/* Define colors */
+
+:root {
+  /* Primary colors */
+  /* Blue */
+  --blue: hsl(246, 80%, 60%);
+
+  /* Light red (work) */
+  --light-red-work: hsl(15, 100%, 70%);
+  /* Soft blue (play) */
+  --soft-blue-play: hsl(195, 74%, 62%);
+  /* Light red (study) */
+  --light-red-study: hsl(348, 100%, 68%);
+  /* Lime green (exercise) */
+  --lime-green-exercise: hsl(145, 58%, 55%);
+  /* Violet (social) */
+  --violet-social: hsl(264, 64%, 52%);
+  /* Soft orange (self care) */
+  --soft-orange-self-care: hsl(43, 84%, 65%);
+
+  /* Neutral colors */
+  /* Very dark blue */
+  --very-dark-blue: hsl(226, 43%, 10%);
+  /* Dark blue */
+  --dark-blue: hsl(235, 46%, 20%);
+  /* Desaturated blue */
+  --desaturated-blue: hsl(235, 45%, 61%);
+  /* Pale blue */
+  --pale-blue: hsl(236, 100%, 87%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--very-dark-blue);
+}
+
+/* Header */
+.header {
+  background-color: var(--blue);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+/* Title */
+.title {
+  color: var(--pale-blue);
+  margin-bottom: 30px;
+}
+
+/* Profile */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.profile img {
+  width: 50px;
+  border: 2px solid var(--pale-blue);
+  border-radius: 50%;
+}
+
+.profile h1 {
+  color: var(--pale-blue);
+}
+
+/* Timeframes */
+.timeframes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: var(--pale-blue);
+}
+
+.timeframes h2 {
+  color: var(--pale-blue);
+} 
+
+.timeframes p {
+  color: var(--desaturated-blue);
+}
+
+/* Grid */q
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Daily Section */
+.daily {
+  grid-area: 1 / 1 / 3 / 3;
+}
+
+/* Weekly Section */
+.weekly {
+  grid-area: 1 / 3 / 3 / 5;
+}
+
+/* Monthly Section */
+.monthly {
+  grid-area: 3 / 1 / 5 / 5;
+}
