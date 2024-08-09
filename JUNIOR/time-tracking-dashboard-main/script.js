@@ -1,5 +1,19 @@
 'USE STRICT'
 
+// Event Listener for the hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('active');
+});
+
+// Event Listener for the close button
+const closeBtn = document.querySelector('.close-btn');
+closeBtn.addEventListener('click', () => {
+  hamburger.classList.remove('active');
+  navMenu.classList.remove('active');
+});
 
 // Event Listener for the radio buttons
 const radioButtons = document.querySelectorAll('input[name="stats-options"]');
