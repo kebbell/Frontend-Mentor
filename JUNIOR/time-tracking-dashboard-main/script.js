@@ -18,6 +18,7 @@ closeBtn.addEventListener('click', () => {
 // Event Listener for the radio buttons
 const radioButtons = document.querySelectorAll('input[name="stats-options"]');
 
+
 radioButtons.forEach(radio => {
     radio.addEventListener('change', () => {
         const selectedOption = document.querySelector('input[name="stats-options"]:checked').value;
